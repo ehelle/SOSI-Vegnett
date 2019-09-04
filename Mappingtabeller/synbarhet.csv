@@ -1,0 +1,5 @@
+﻿feature,num,sosinavn
+kvalitet.Posisjonskvalitet.synbarhet,0,fulltUtSynligGjenfinnbarITerrenget
+kvalitet.Posisjonskvalitet.synbarhet,1,dårligGjenfinnbarITerreng
+kvalitet.Posisjonskvalitet.synbarhet,2,middelsSynligIFlybildeModell
+kvalitet.Posisjonskvalitet.synbarhet,3,dårligIkkeSynligIFlybildeModell
