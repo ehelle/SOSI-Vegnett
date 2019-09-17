@@ -1,33 +1,101 @@
 import requests
 import shapely.wkt
 from shapely.ops import linemerge, LineString, Point
+from functools import reduce
 
 API = 'https://www.utv.vegvesen.no/nvdb/api/v3/'
+#API = 'https://nvdbw01.kantega.no/nvdb/api/v3/'
 
-print("hello")
 
-def linref2geom(sekvens_nr, fra, til, super = False):
+def linref2geom(sekvens_nr, fra, til):
     url = API + "vegnett/veglenkesekvenser/" + str(sekvens_nr)
     json = fetchJson(url)
     lst = []
     fra = float(fra)
     til = float(til)
     for veglenke in json["veglenker"]:
-        if super:
+        if 'sluttdato' in veglenke or veglenke['detaljnivå'] == 'Vegtrase':
+            continue
+        start = float(veglenke['startposisjon'])
+        slutt = float(veglenke['sluttposisjon'])
+        if within(start, slutt, fra, til):
+            lst.append({
+            'start': start,
+            'slutt': slutt,
+            'veglenkesekvens': sekvens_nr,
+            'geom': [geom(veglenke)]
+            }) 
+        elif overlaps(start, slutt, fra, til):
+            lst.append({
+            'start': max(start, fra),
+            'slutt': min(slutt, til),
+            'veglenkesekvens': sekvens_nr,
+            'geom': [cut(geom(veglenke), start, slutt, fra, til)]
+            })
+
+    lst = sorted(lst, key = lambda x: x['start'])
+    if len(lst) > 1:
+        lst = reduce(mergeRef, [[lst[0]]] + lst[1:])
+
+    for obj in lst:
+        obj['geom'] = linemerge(obj['geom'])
+        print('start: %s, slutt: %s\n' % (obj['start'], obj['slutt']))
+        print('geom : %s' % obj['geom'])
+    return lst
+
+def mergeRef(o1, o2):
+    if o1[-1]['slutt'] == o2['start'] and o1[-1]['veglenkesekvens'] == o2['veglenkesekvens']:
+        o1[-1]['slutt'] = o2['slutt']
+        o1[-1]['geom'] = o1[-1]['geom'] + o2['geom']
+    else:
+        o1.append(o2)
+    return o1
+
+def super2geom(sekvens_nr, fra, til):
+    url = API + "vegnett/veglenkesekvenser?superid=" + str(sekvens_nr)
+    json = fetchJson(url)
+    lst = []
+    fra = float(fra)
+    til = float(til)
+    for sekv in json['objekter']:
+        veglenkesekvensid = sekv['veglenkesekvensid']
+        for veglenke in sekv["veglenker"]:
+            if 'sluttdato' in veglenke:
+                continue
             start = float(veglenke['superstedfesting']['startposisjon'])
             slutt = float(veglenke['superstedfesting']['sluttposisjon'])
-        else:
-            start = float(veglenke['startposisjon'])
-            slutt = float(veglenke['sluttposisjon'])
-        if within(start, slutt, fra, til):
-            lst.append(geom(veglenke))
-        elif overlaps(start, slutt, fra, til):
-            lst.append(cut(geom(veglenke), veglenke['startposisjon'], veglenke['sluttposisjon'], fra, til))
-    #for w in withinLst: print("within: %s", w)
-    #for o in overlapsLst: print("overlaps: %s", o)
-    merged = linemerge(lst)
-    #print("merged: %s", merged)
-    return merged
+            if within(start, slutt, fra, til):
+                lst.append({
+                'start': veglenke['startposisjon'],
+                'slutt': veglenke['sluttposisjon'],
+                'veglenkesekvens': veglenkesekvensid,
+                'geom': [geom(veglenke)]
+                }) 
+            elif overlaps(start, slutt, fra, til):
+                lst.append({
+                'start': superstedfesting2veglenke(max(start, fra), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
+                'slutt': superstedfesting2veglenke(min(slutt, til), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
+                'veglenkesekvens': veglenkesekvensid,
+                'geom': [cut(geom(veglenke), start, slutt, fra, til)]
+                })
+
+    lst = sorted(lst, key = lambda x: (x['veglenkesekvens'], x['start']))
+    if len(lst) > 1:
+        lst = reduce(mergeRef, [[lst[0]]] + lst[1:])
+
+    for obj in lst:
+        obj['geom'] = linemerge(obj['geom'])
+        print('xstart: %s, slutt: %s\n' % (obj['start'], obj['slutt']))
+        print('xgeom : %s' % obj['geom'])
+    return lst
+
+def superstedfesting2veglenke(stedf, s_start, s_slutt, v_start, v_slutt):
+    scale = (s_slutt - s_start) / (v_slutt - v_start)
+    return ((stedf - s_start) / scale) + v_start
+
+def passesTests(veglenke):
+    return 'sluttdato' not in veglenke and \
+        veglenke['detaljnivå'] != 'Vegtrase'
 
 def fetchJson(url):
     resp = requests.get(url)
@@ -36,7 +104,7 @@ def fetchJson(url):
     return resp.json()
 
 def overlaps(start, slutt, fra, til):
-    return (start <= fra and slutt >= fra) or (start <= til and slutt >= til)
+    return (start >= fra and start <= til) or (slutt >= fra and slutt <= til)
 
 def within(start, slutt, fra, til):
     return start >= fra and slutt <= til
@@ -44,7 +112,6 @@ def within(start, slutt, fra, til):
 def geom(veglenke):
     wkt = veglenke['geometri']['wkt']
     line = shapely.wkt.loads(wkt)
-    #print(line)
     return line
 
 def cut(line, vl_fra, vl_til, obj_fra, obj_til):
@@ -94,5 +161,5 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til):
 
 
 if __name__ == '__main__':
-    print("test")
-    linref2geom(1057086, 0.0, 0.65) #0.72926056)
+    linref2geom(705275, 0.0, 0.16063818)
+    super2geom(705275, 0.0, 0.16063818)
