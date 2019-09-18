@@ -392,6 +392,11 @@ Enhet: Kilometer/time</documentation>
       </appinfo>
     </annotation>
     <restriction base="string">
+      <enumeration value="15">
+        <annotation>
+          <documentation>15</documentation>
+        </annotation>
+      </enumeration>
       <enumeration value="20">
         <annotation>
           <documentation>11576: 20</documentation>
@@ -1173,7 +1178,6 @@ Enhet: Meter</documentation>
       <documentation>8763: Gir lovlige verdier for høydeposisjon i NVDB sin lokasjonsattributt</documentation>
       <appinfo>
         <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="NVDB_ID">8763</taggedValue>
-        <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LRHØYDEPOSISJON</taggedValue>
       </appinfo>
     </annotation>
     <union memberTypes="app:HøydeposisjonEnumerationType app:HøydeposisjonOtherType"/>
@@ -1183,7 +1187,6 @@ Enhet: Meter</documentation>
       <documentation>8763: Gir lovlige verdier for høydeposisjon i NVDB sin lokasjonsattributt</documentation>
       <appinfo>
         <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="NVDB_ID">8763</taggedValue>
-        <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LRHØYDEPOSISJON</taggedValue>
       </appinfo>
     </annotation>
     <restriction base="string">
@@ -1763,9 +1766,6 @@ Merknad: Lenkens posisjon i et nettverk og skalering av lengde i forhold til geo
 Merknad: Dersom verdi er angitt overstyrer denne standard metode for det refererte nettverkselementet. 
 
 &lt;font color="#0f0f0f"&gt;&lt;i&gt;ISO19148: overridingLRM&lt;/i&gt;&lt;/font&gt;</documentation>
-          <appinfo>
-            <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LRLRM</taggedValue>
-          </appinfo>
         </annotation>
       </element>
       <element minOccurs="0" name="retning" type="app:RetningskodeType">
@@ -1787,7 +1787,7 @@ Merknad: Dersom verdi er angitt overstyrer denne standard metode for det referer
       </element>
       <element name="lenkesekvens" type="app:IdentifikasjonPropertyType">
         <annotation>
-          <documentation>realisering av rollen nettverkselement</documentation>
+          <documentation>Realisering av rollen nettverkselement</documentation>
           <appinfo>
             <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">IDENT</taggedValue>
           </appinfo>
@@ -1921,7 +1921,6 @@ LR_DistanceExpression har også en subtype LRO_LateralOffsetDistanceExpression, 
               <documentation>Forskyvning til side for nettverkselementet. Positivt tall betyr høyre side, negativt tall betyr venstre side.
 &lt;font color="#0f0f0f"&gt;&lt;i&gt;ISO19148: offsetLateralDistance&lt;/i&gt; &lt;/font&gt;</documentation>
               <appinfo>
-                <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LRHØYDEPOSISJON</taggedValue>
                 <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LRHØYDEPOSISJON</taggedValue>
               </appinfo>
             </annotation>
@@ -2641,7 +2640,6 @@ På bro, i tunnel, inne i et bygningsmessig anlegg, etc.</documentation>
       <documentation>8762: Gir lovlige verdier for sideposisjon i NVDB sin lokasjonsattributt. Høyre og venstre er relatert til vegens metreringsretning.</documentation>
       <appinfo>
         <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="NVDB_ID">8762</taggedValue>
-        <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LRSIDEPOSISJON</taggedValue>
       </appinfo>
     </annotation>
     <union memberTypes="app:SideposisjonEnumerationType app:SideposisjonOtherType"/>
@@ -2651,7 +2649,6 @@ På bro, i tunnel, inne i et bygningsmessig anlegg, etc.</documentation>
       <documentation>8762: Gir lovlige verdier for sideposisjon i NVDB sin lokasjonsattributt. Høyre og venstre er relatert til vegens metreringsretning.</documentation>
       <appinfo>
         <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="NVDB_ID">8762</taggedValue>
-        <taggedValue xmlns="http://www.interactive-instruments.de/ShapeChange/AppInfo" tag="SOSI_navn">LRSIDEPOSISJON</taggedValue>
       </appinfo>
     </annotation>
     <restriction base="string">
@@ -4406,7 +4403,7 @@ Dersom ikke oppgitt, gir det "Nei"-alternativet, dvs "Ikke sideveg"</documentati
               </appinfo>
             </annotation>
           </element>
-          <element name="stedligBeredskap" type="app:StedligBeredskapType">
+          <element minOccurs="0" name="stedligBeredskap" type="app:StedligBeredskapType">
             <annotation>
               <documentation>3107: Angir om det er stedlig beredskap knyttet til vegstrekningen.</documentation>
               <appinfo>
