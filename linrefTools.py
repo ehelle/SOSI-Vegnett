@@ -18,6 +18,7 @@ def linref2geom(sekvens_nr, fra, til, retning):
             continue
         start = float(veglenke['startposisjon'])
         slutt = float(veglenke['sluttposisjon'])
+        lengde = float(veglenke['geometri']['lengde'])
         if within(start, slutt, fra, til):
             lst.append({
             'start': start,
@@ -27,13 +28,15 @@ def linref2geom(sekvens_nr, fra, til, retning):
             'geom': [geom(veglenke)]
             }) 
         elif overlaps(start, slutt, fra, til):
-            lst.append({
-            'start': max(start, fra),
-            'slutt': min(slutt, til),
-            'veglenkesekvens': sekvens_nr,
-            'retning': retning,
-            'geom': [cut(geom(veglenke), start, slutt, fra, til)]
-            })
+            cutGeo = cut(geom(veglenke), start, slutt, fra, til, lengde)
+            if cutGeo:
+                lst.append({
+                'start': max(start, fra),
+                'slutt': min(slutt, til),
+                'veglenkesekvens': sekvens_nr,
+                'retning': retning,
+                'geom': [cutGeo]
+                })
 
     lst = sorted(lst, key = lambda x: x['start'])
     if len(lst) > 1:
@@ -52,9 +55,9 @@ def fixMulti(geo):
     fst = list(geo[0].coords)
     lst = list(geo[-1].coords)
     if isCircular(fst):
-        fst[0] = (fst[0][0] + 0.01, fst[0][1], fst[0][2])
-    if isCircular(lst[-1]):
-        lst[-1] = (lst[-1][0] + 0.01, lst[-1][1], lst[-1][2])
+        fst[0] = (fst[0][0] + 0.000001, fst[0][1], fst[0][2])
+    if isCircular(lst):
+        lst[-1] = (lst[-1][0] + 0.000001, lst[-1][1], lst[-1][2])
     return linemerge([LineString(fst)] + [x for x in geo[1:-2]] + [LineString(lst)])
 
 def isCircular(line):
@@ -77,26 +80,33 @@ def super2geom(sekvens_nr, fra, til, retning):
     for sekv in json['objekter']:
         veglenkesekvensid = sekv['veglenkesekvensid']
         for veglenke in sekv["veglenker"]:
-            if 'sluttdato' in veglenke or not riktigRetning(veglenke, retning):
+            if 'sluttdato' in veglenke:
                 continue
             start = float(veglenke['superstedfesting']['startposisjon'])
             slutt = float(veglenke['superstedfesting']['sluttposisjon'])
+            lengde = float(veglenke['lengde'])
+            retning = veglenke['superstedfesting']['retning']
+            geo = geom(veglenke)
+            if retning == 'MOT':
+                geo.coords = geo.coords[::-1]
             if within(start, slutt, fra, til):
                 lst.append({
                 'start': veglenke['startposisjon'],
                 'slutt': veglenke['sluttposisjon'],
                 'veglenkesekvens': veglenkesekvensid,
                 'retning': retning,
-                'geom': [geom(veglenke)]
+                'geom': [geo]
                 }) 
             elif overlaps(start, slutt, fra, til):
-                lst.append({
-                'start': superstedfesting2veglenke(max(start, fra), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
-                'slutt': superstedfesting2veglenke(min(slutt, til), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
-                'veglenkesekvens': veglenkesekvensid,
-                'retning': retning,
-                'geom': [cut(geom(veglenke), start, slutt, fra, til)]
-                })
+                cutGeo = cut(geo, start, slutt, fra, til, lengde)
+                if cutGeo:
+                    lst.append({
+                    'start': superstedfesting2veglenke(max(start, fra), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
+                    'slutt': superstedfesting2veglenke(min(slutt, til), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
+                    'veglenkesekvens': veglenkesekvensid,
+                    'retning': retning,
+                    'geom': [cutGeo]
+                    })
 
     lst = sorted(lst, key = lambda x: (x['veglenkesekvens'], x['start']))
     if len(lst) > 1:
@@ -111,27 +121,18 @@ def super2geom(sekvens_nr, fra, til, retning):
         print('xgeom : %s' % obj['geom'])
     return lst
 
-def linref2all(sekvens_nr, fra, til, retning):
+def linref2all(sekvens_nr, fra, til, retning = 'MED'):
     return linref2geom(sekvens_nr, fra, til, retning) + super2geom(sekvens_nr, fra, til, retning)
-
-def riktigRetning(veglenke, retning):
-    felt = veglenke['superstedfesting']['kjørefelt'][0] # fix for bokstaver eks 1H
-    #print('felt: %s\nretning: %s\n' % (felt,retning))
-    return bool(int(felt) % 2) == (retning == 'MED') #oddetall og med eller partall og mot
     
-
 def superstedfesting2veglenke(stedf, s_start, s_slutt, v_start, v_slutt):
     scale = (s_slutt - s_start) / (v_slutt - v_start)
     return ((stedf - s_start) / scale) + v_start
 
-def passesTests(veglenke):
-    return 'sluttdato' not in veglenke and \
-        veglenke['detaljnivå'] != 'Vegtrase'
-
 def fetchJson(url):
     resp = requests.get(url)
     if resp.status_code != 200:
-        raise requests.exeption.HTTPError(resp.status_code)
+        #raise requests.exeption.HTTPError(resp.status_code)
+        raise ConnectionError(resp.status_code)
     return resp.json()
 
 def overlaps(start, slutt, fra, til):
@@ -150,12 +151,13 @@ def geom(veglenke):
 def mround(match): 
     return "{:.2f}".format(float(match.group()))
 
-def almostEqual(a, b, tolerance = 0.01):
-    return abs(a - b) >= tolerance
+def almostEqual(a, b, scale, tolerance = 0.01):
+    return abs(a - b) <= (tolerance / scale)
 
-def cut(line, vl_fra, vl_til, obj_fra, obj_til):
+def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
     print('vl_fra: %s, vl_til: %s, obj_fra: %s, obj_til: %s' % (vl_fra, vl_til, obj_fra, obj_til))
     vl_len = vl_til - vl_fra
+    scale = lengde * vl_len
     if obj_fra <= vl_fra and obj_til >= vl_til:
         return line
     elif obj_fra <= vl_fra and obj_til < vl_til:
@@ -163,37 +165,45 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til):
         coords = list(line.coords)
         for i, p in enumerate(coords):
             pd = line.project(Point(p), normalized=True)
-            if almostEqual(pd, distance):
-                return LineString(coords[:i+1])
+            if almostEqual(pd, distance, scale):
+                #print('pd: %s, distance: %s, i: %s, scale: %s, lengde: %s, \ncoords: %s' % (pd, distance, i, scale, lengde, coords))
+                if i == 0:
+                    return []
+                else:
+                    return LineString(coords[:i+1])
             if pd > distance:
                 cp = line.interpolate(distance, normalized=True)
                 return LineString(coords[:i] + [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)])
     elif obj_fra > vl_fra and obj_til >= vl_til:
-        distance = (vl_til - obj_fra) / vl_len
+        distance = 1 - ((vl_til - obj_fra) / vl_len)
         coords = list(line.coords)
         for i, p in enumerate(coords):
             pd = line.project(Point(p), normalized=True)
-            if almostEqual(pd, distance):
-                return LineString(coords[i:])
+            if almostEqual(pd, distance, scale):
+                #print('pd: %s, distance: %s, i: %s\ncoords: %s' % (pd, distance, i, coords))
+                if i == 0:
+                    return [] # single point line
+                else:
+                    return LineString(coords[i:])
             if pd > distance:
                 cp = line.interpolate(distance, normalized=True)
                 return LineString([(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)] + coords[i:])
     elif obj_fra > vl_fra and obj_til < vl_til:
-        dist1 = (vl_til - obj_fra) / vl_len
+        dist1 = 1 - ((vl_til - obj_fra) / vl_len)
         dist2 = (obj_til - vl_fra) / vl_len
         coords = list(line.coords)
         start = None
         for i, p in enumerate(coords):
             pd = line.project(Point(p), normalized=True)
             if start == None:
-                if almostEqual(pd, dist1):
+                if almostEqual(pd, dist1, scale):
                     start = i
                     startP = []
                 elif pd > dist1:
                     cp = line.interpolate(dist1, normalized=True)
                     start = i + 1
                     startP [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)]
-            if almostEqual(pd, dist2):
+            if almostEqual(pd, dist2, scale):
                 return LineString(startP + coords[start:i+1])
             elif pd > dist2:
                 cp = line.interpolate(dist2, normalized=True)
@@ -203,4 +213,5 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til):
 if __name__ == '__main__':
     #linref2geom(705275, 0.0, 0.16063818)
     #super2geom(705275, 0.0, 0.16063818)
-    linref2all(1002615, 0.0, 0.0022977, 'MOT')
+    #linref2all(1002615, 0.0, 0.0022977, 'MOT')
+    linref2all(1060628, 0.44823133, 0.52393559)
