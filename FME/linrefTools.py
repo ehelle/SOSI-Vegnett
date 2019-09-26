@@ -24,7 +24,7 @@ def linref2geom(sekvens_nr, fra, til, retning):
             'start': start,
             'slutt': slutt,
             'veglenkesekvens': sekvens_nr,
-            'retning': retning,
+            'retning': retning.lower(),
             'geom': [geom(veglenke)]
             }) 
         elif overlaps(start, slutt, fra, til):
@@ -34,7 +34,7 @@ def linref2geom(sekvens_nr, fra, til, retning):
                 'start': max(start, fra),
                 'slutt': min(slutt, til),
                 'veglenkesekvens': sekvens_nr,
-                'retning': retning,
+                'retning': retning.lower(),
                 'geom': [cutGeo]
                 })
 
@@ -94,7 +94,7 @@ def super2geom(sekvens_nr, fra, til, retning):
                 'start': veglenke['startposisjon'],
                 'slutt': veglenke['sluttposisjon'],
                 'veglenkesekvens': veglenkesekvensid,
-                'retning': retning,
+                'retning': retning.lower(),
                 'geom': [geo]
                 }) 
             elif overlaps(start, slutt, fra, til):
@@ -104,7 +104,7 @@ def super2geom(sekvens_nr, fra, til, retning):
                     'start': superstedfesting2veglenke(max(start, fra), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
                     'slutt': superstedfesting2veglenke(min(slutt, til), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
                     'veglenkesekvens': veglenkesekvensid,
-                    'retning': retning,
+                    'retning': retning.lower(),
                     'geom': [cutGeo]
                     })
 
@@ -121,7 +121,7 @@ def super2geom(sekvens_nr, fra, til, retning):
         print('xgeom : %s' % obj['geom'])
     return lst
 
-def linref2all(sekvens_nr, fra, til, retning = 'MED'):
+def linref2all(sekvens_nr, fra, til, retning = 'med'):
     return linref2geom(sekvens_nr, fra, til, retning) + super2geom(sekvens_nr, fra, til, retning)
     
 def superstedfesting2veglenke(stedf, s_start, s_slutt, v_start, v_slutt):
@@ -180,8 +180,8 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
         for i, p in enumerate(coords):
             pd = line.project(Point(p), normalized=True)
             if almostEqual(pd, distance, scale):
-                #print('pd: %s, distance: %s, i: %s\ncoords: %s' % (pd, distance, i, coords))
-                if i == 0:
+                print('pd: %s, distance: %s, i: %s\ncoords: %s' % (pd, distance, i, coords))
+                if i == 0 or i == (len(coords) - 1):
                     return [] # single point line
                 else:
                     return LineString(coords[i:])
@@ -194,7 +194,7 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
         coords = list(line.coords)
         start = None
         for i, p in enumerate(coords):
-            pd = line.project(Point(p), normalized=True)
+            pd = line.project(exitPoint(p), normalized=True)
             if start == None:
                 if almostEqual(pd, dist1, scale):
                     start = i
@@ -209,9 +209,26 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
                 cp = line.interpolate(dist2, normalized=True)
                 return LineString(startP + coords[start:i] + [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)])
 
+def snuFeltListe(lst):
+    res = []
+    for felt in lst:
+        n = int(felt[0])
+        if n % 2: #odd
+            n += 1
+        else: # even
+            n -= 1
+        res.append(str(n) + felt[1:])
+    return res
 
+def test():
+    print("running tests")
+    assert(snuFeltListe(['1','2']) == ['2','1'])
+    assert(snuFeltListe(['1h1,2v1'] == ['2h1','1v1']))
+    print("tests pass")
+            
 if __name__ == '__main__':
+    test()
     #linref2geom(705275, 0.0, 0.16063818)
     #super2geom(705275, 0.0, 0.16063818)
     #linref2all(1002615, 0.0, 0.0022977, 'MOT')
-    linref2all(1060628, 0.44823133, 0.52393559)
+    linref2all(705274, 0.88317984, 0.92373566)
