@@ -47,8 +47,8 @@ def linref2geom(sekvens_nr, fra, til, retning):
         if geo.geom_type == 'MultiLineString':
             geo = fixMulti(geo)            
         obj['geom'] = geo
-        print('start: %s, slutt: %s\n' % (obj['start'], obj['slutt']))
-        print('geom : %s' % obj['geom'])
+        #print('start: %s, slutt: %s\n' % (obj['start'], obj['slutt']))
+        #print('geom : %s' % obj['geom'])
     return lst
 
 def fixMulti(geo):
@@ -84,6 +84,7 @@ def super2geom(sekvens_nr, fra, til, retning):
                 continue
             start = float(veglenke['superstedfesting']['startposisjon'])
             slutt = float(veglenke['superstedfesting']['sluttposisjon'])
+            #print("start: %s, slutt: %s, fra: %s, til: %s" % (start, slutt, fra, til))
             lengde = float(veglenke['lengde'])
             retning = veglenke['superstedfesting']['retning']
             geo = geom(veglenke)
@@ -101,8 +102,10 @@ def super2geom(sekvens_nr, fra, til, retning):
                 cutGeo = cut(geo, start, slutt, fra, til, lengde)
                 if cutGeo:
                     lst.append({
-                    'start': superstedfesting2veglenke(max(start, fra), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
-                    'slutt': superstedfesting2veglenke(min(slutt, til), start, slutt, float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
+                    'start': superstedfesting2veglenke(max(start, fra), start, slutt, \
+                                                       float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
+                    'slutt': superstedfesting2veglenke(min(slutt, til), start, slutt, \
+                                                       float(veglenke['startposisjon']), float(veglenke['sluttposisjon'])),
                     'veglenkesekvens': veglenkesekvensid,
                     'retning': retning.lower(),
                     'geom': [cutGeo]
@@ -117,8 +120,8 @@ def super2geom(sekvens_nr, fra, til, retning):
         if geo.geom_type == 'MultiLineString':
             geo = fixMulti(geo)            
         obj['geom'] = geo
-        print('xstart: %s, slutt: %s\n' % (obj['start'], obj['slutt']))
-        print('xgeom : %s' % obj['geom'])
+        #print('xstart: %s, slutt: %s\n' % (obj['start'], obj['slutt']))
+        #print('xgeom : %s' % obj['geom'])
     return lst
 
 def linref2all(sekvens_nr, fra, til, retning = 'med'):
@@ -136,7 +139,7 @@ def fetchJson(url):
     return resp.json()
 
 def overlaps(start, slutt, fra, til):
-    return (start >= fra and start < til) or (slutt > fra and slutt <= til)
+    return (fra >= start and fra < slutt) or (til > start and til <= slutt)
 
 def within(start, slutt, fra, til):
     return start >= fra and slutt <= til
@@ -155,7 +158,7 @@ def almostEqual(a, b, scale, tolerance = 0.01):
     return abs(a - b) <= (tolerance / scale)
 
 def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
-    print('vl_fra: %s, vl_til: %s, obj_fra: %s, obj_til: %s' % (vl_fra, vl_til, obj_fra, obj_til))
+    #print('vl_fra: %s, vl_til: %s, obj_fra: %s, obj_til: %s' % (vl_fra, vl_til, obj_fra, obj_til))
     vl_len = vl_til - vl_fra
     scale = lengde * vl_len
     if obj_fra <= vl_fra and obj_til >= vl_til:
@@ -180,7 +183,7 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
         for i, p in enumerate(coords):
             pd = line.project(Point(p), normalized=True)
             if almostEqual(pd, distance, scale):
-                print('pd: %s, distance: %s, i: %s\ncoords: %s' % (pd, distance, i, coords))
+                #print('pd: %s, distance: %s, i: %s\ncoords: %s' % (pd, distance, i, coords))
                 if i == 0 or i == (len(coords) - 1):
                     return [] # single point line
                 else:
@@ -194,7 +197,7 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
         coords = list(line.coords)
         start = None
         for i, p in enumerate(coords):
-            pd = line.project(exitPoint(p), normalized=True)
+            pd = line.project(Point(p), normalized=True)
             if start == None:
                 if almostEqual(pd, dist1, scale):
                     start = i
@@ -202,7 +205,7 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
                 elif pd > dist1:
                     cp = line.interpolate(dist1, normalized=True)
                     start = i + 1
-                    startP [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)]
+                    startP = [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)]
             if almostEqual(pd, dist2, scale):
                 return LineString(startP + coords[start:i+1])
             elif pd > dist2:
@@ -223,7 +226,8 @@ def snuFeltListe(lst):
 def test():
     print("running tests")
     assert(snuFeltListe(['1','2']) == ['2','1'])
-    assert(snuFeltListe(['1h1,2v1'] == ['2h1','1v1']))
+    assert(snuFeltListe(['1h1','2v1']) == ['2h1','1v1'])
+    assert(overlaps(0.06979609, 0.61288609, 0.4018847, 0.5443459))
     print("tests pass")
             
 if __name__ == '__main__':
@@ -231,4 +235,4 @@ if __name__ == '__main__':
     #linref2geom(705275, 0.0, 0.16063818)
     #super2geom(705275, 0.0, 0.16063818)
     #linref2all(1002615, 0.0, 0.0022977, 'MOT')
-    linref2all(705274, 0.88317984, 0.92373566)
+    #linref2all(705274, 0.88317984, 0.92373566)
