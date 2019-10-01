@@ -31,7 +31,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2018.1.1.1 (20181203 - Build 18578 - WIN64)"
-#!   LAST_SAVE_DATE="2019-09-30T15:09:38"
+#!   LAST_SAVE_DATE="2019-10-01T13:12:22"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -49,7 +49,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN="NO"
-#!   VIEW_POSITION="-517.862 -2404.79"
+#!   VIEW_POSITION="-1761.92 -925.604"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="105"
@@ -436,6 +436,7 @@
 #!     <FEAT_ATTRIBUTE ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="kommunenummer" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="_schemamapper_row_ids" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fase" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="viapunkt" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
@@ -655,6 +656,20 @@
 #!   SIZE_POLICY="10"
 #!   ANCHORED_NODE="9"
 #! />
+#! <COMMENT
+#!   IDENTIFIER="254"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Kun eksisterende veg&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-156.39475472445196 -2168.3345238942852"
+#!   TOP_LEFT="-156.39475472445196 -2168.3345238942852"
+#!   BOTTOM_RIGHT="431.6930892539886 -2167.3345238942852"
+#!   BOUNDING_RECT="-156.39475472445196 -2168.3345238942852 588.08784397844056 -1"
+#!   ORDER="500000000000078"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="253"
+#! />
 #! </COMMENTS>
 #! <CONSTANTS>
 #! </CONSTANTS>
@@ -694,7 +709,7 @@
 #!   NAME="Definerer geometriegenskaper"
 #!   DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
 #!   TOP_LEFT="4858.9780283279015 -2889.4171198260115"
-#!   ORDER="500000000000192"
+#!   ORDER="500000000000225"
 #!   COLLAPSED="true"
 #!   UNCOLLAPSED_SIZE="2542.4375973283522 1000.9021831336831"
 #!   BOTTOM_RIGHT="5988.1551196464316 -3094.4171198260115"
@@ -900,6 +915,19 @@
 #!   STICKY="true"
 #!   COLOUR="0.078431372549019607,0.0078431372549019607,0.61568627450980395"
 #!   CONTENTS="50 240 235 239 247 230 249 243 238 234 236 241 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="257"
+#!   NAME="Fase"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-206.39475472445196 -1722.0216369558923"
+#!   ORDER="500000000000228"
+#!   BOTTOM_RIGHT="1139.392407760268 -2358.0216369558921"
+#!   BOUNDING_RECT="-206.39475472445196 -1722.0216369558923 1345.7871624847201 636"
+#!   STICKY="true"
+#!   COLOUR="0.94901960784313721,0.6705882352941176,0.53725490196078429"
+#!   CONTENTS="255 250 253 254 "
 #! >
 #! </BOOKMARK>
 #! </BOOKMARKS>
@@ -1742,6 +1770,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="Jernbanekryssing"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1777,6 +1806,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <OUTPUT_FEAT NAME="Svingerestriksjon"/>
 #!     <FEAT_COLLAPSED COLLAPSED="2"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -1812,6 +1842,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <OUTPUT_FEAT NAME="Vegsperring"/>
 #!     <FEAT_COLLAPSED COLLAPSED="3"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="3" />
@@ -1847,6 +1878,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <OUTPUT_FEAT NAME="Høydebegrensning"/>
 #!     <FEAT_COLLAPSED COLLAPSED="4"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="4" />
@@ -1882,6 +1914,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <OUTPUT_FEAT NAME="Trafikkreguleringer"/>
 #!     <FEAT_COLLAPSED COLLAPSED="5"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="5" />
@@ -1917,6 +1950,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="5" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="5" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="5" />
 #!     <OUTPUT_FEAT NAME="Gågate"/>
 #!     <FEAT_COLLAPSED COLLAPSED="6"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="6" />
@@ -1952,6 +1986,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="6" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="6" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="6" />
 #!     <OUTPUT_FEAT NAME="VærutsattVeg"/>
 #!     <FEAT_COLLAPSED COLLAPSED="7"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="7" />
@@ -1987,6 +2022,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="7" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="7" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="7" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="7" />
 #!     <OUTPUT_FEAT NAME="Fartsgrense"/>
 #!     <FEAT_COLLAPSED COLLAPSED="8"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="8" />
@@ -2022,6 +2058,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="8" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="8" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="8" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="8" />
 #!     <OUTPUT_FEAT NAME="Fartsgrense_variabel"/>
 #!     <FEAT_COLLAPSED COLLAPSED="9"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="9" />
@@ -2057,6 +2094,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="9" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="9" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="9" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="9" />
 #!     <OUTPUT_FEAT NAME="FunksjonellVegklasse"/>
 #!     <FEAT_COLLAPSED COLLAPSED="10"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="10" />
@@ -2092,6 +2130,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="10" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="10" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="10" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="10" />
 #!     <OUTPUT_FEAT NAME="InnkjøringForbudt"/>
 #!     <FEAT_COLLAPSED COLLAPSED="11"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="11" />
@@ -2127,6 +2166,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="11" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="11" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="11" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="11" />
 #!     <OUTPUT_FEAT NAME="Landbruksvegklasse"/>
 #!     <FEAT_COLLAPSED COLLAPSED="12"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="12" />
@@ -2162,6 +2202,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="12" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="12" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="12" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="12" />
 #!     <OUTPUT_FEAT NAME="Motorveg"/>
 #!     <FEAT_COLLAPSED COLLAPSED="13"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="13" />
@@ -2197,6 +2238,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="13" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="13" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="13" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="13" />
 #!     <OUTPUT_FEAT NAME="Beredskapsveg"/>
 #!     <FEAT_COLLAPSED COLLAPSED="14"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="14" />
@@ -2232,6 +2274,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="14" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="14" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="14" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="14" />
 #!     <OUTPUT_FEAT NAME="Serviceveg"/>
 #!     <FEAT_COLLAPSED COLLAPSED="15"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="15" />
@@ -2267,6 +2310,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="15" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="15" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="15" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="15" />
 #!     <OUTPUT_FEAT NAME="&lt;UNFILTERED&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="16"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="16" />
@@ -2302,6 +2346,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="16" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="16" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="16" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="16" />
 #!     <OUTPUT_FEAT NAME="&lt;BLANK&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="17"/>
 #!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="17" />
@@ -2337,6 +2382,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="17" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="17" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="17" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="17" />
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="Gate,Jernbanekryssing,Svingerestriksjon,Vegsperring,H&lt;u00f8&gt;ydebegrensning,Trafikkreguleringer,G&lt;u00e5&gt;gate,V&lt;u00e6&gt;rutsattVeg,Fartsgrense,Fartsgrense_variabel,FunksjonellVegklasse,Innkj&lt;u00f8&gt;ringForbudt,Landbruksvegklasse,Motorveg,Beredskapsveg,Serviceveg,&lt;lt&gt;Unfiltered&lt;gt&gt;,&lt;lt&gt;Blank&lt;gt&gt;"/>
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="XFORMER_GROUP" PARM_VALUE=""/>
@@ -2388,6 +2434,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2436,6 +2483,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2513,6 +2561,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2561,6 +2610,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2609,6 +2659,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -2657,6 +2708,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="3" />
@@ -2723,6 +2775,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2771,6 +2824,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2848,6 +2902,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2896,6 +2951,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2973,6 +3029,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3038,6 +3095,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="senterlinje" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="posisjon,senterlinje"/>
@@ -3090,6 +3148,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3150,6 +3209,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
@@ -4078,6 +4138,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="REMOVE_ATTRS" PARM_VALUE="senterlinje,posisjon"/>
@@ -4131,6 +4192,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="trafikkreguleringstype trafikkreguleringer RENAME_SET_DEFAULT "/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
@@ -4182,6 +4244,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="trafikkreguleringstype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="trafikkreguleringstype"/>
 #!     <XFORM_PARM PARM_NAME="ATTR_LIST_GROUP" PARM_VALUE=""/>
@@ -6639,6 +6702,7 @@
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="funksjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="id id  NO_OP geometri.wkt geometri.wkt  NO_OP metadata.versjon metadata.versjon  NO_OP metadata.type.id metadata.type.id  NO_OP egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.id egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.id  NO_OP egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.enum_id egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.enum_id  NO_OP egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.verdi egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.verdi  NO_OP geometri.egengeometri geometri.egengeometri  NO_OP geometri.srid geometri.srid  NO_OP lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.veglenkesekvens lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.veglenkesekvens  NO_OP lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.startposisjon lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.startposisjon  NO_OP lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.sluttposisjon lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.sluttposisjon  NO_OP lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt; lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;  NO_OP xml_fragment xml_fragment  NO_OP xml_id xml_id  NO_OP xml_matched_element xml_matched_element  NO_OP xml_parent_id xml_parent_id  NO_OP xml_parent_child_pos xml_parent_child_pos  NO_OP fme_feature_type fme_feature_type  NO_OP identifikasjon.Identifikasjon.lokalId identifikasjon.Identifikasjon.lokalId  NO_OP identifikasjon.Identifikasjon.versjonId identifikasjon.Identifikasjon.versjonId  NO_OP identifikasjon.Identifikasjon.navnerom identifikasjon.Identifikasjon.navnerom  NO_OP gml_id gml_id  NO_OP assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.typeId assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.typeId  NO_OP assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.vegobjektId assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.vegobjektId  NO_OP assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.relasjonstype assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.relasjonstype  NO_OP epsg epsg  NO_OP line&lt;u00e6&gt;rPosisjon&lt;opencurly&gt;&lt;closecurly&gt;.Line&lt;u00e6&gt;rPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId line&lt;u00e6&gt;rPosisjon&lt;opencurly&gt;&lt;closecurly&gt;.Line&lt;u00e6&gt;rPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId  NO_OP line&lt;u00e6&gt;rPosisjon&lt;opencurly&gt;&lt;closecurly&gt;.Line&lt;u00e6&gt;rPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom line&lt;u00e6&gt;rPosisjon&lt;opencurly&gt;&lt;closecurly&gt;.Line&lt;u00e6&gt;rPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom  NO_OP line&lt;u00e6&gt;rPosisjon&lt;opencurly&gt;&lt;closecurly&gt;.Line&lt;u00e6&gt;rPosisjonStrekning.startposisjon line&lt;u00e6&gt;rPosisjon&lt;opencurly&gt;&lt;closecurly&gt;.Line&lt;u00e6&gt;rPosisjonStrekning.startposisjon  NO_OP line&lt;u00e6&gt;rPosisjon&lt;opencurly&gt;&lt;closecurly&gt;.Line&lt;u00e6&gt;rPosisjonStrekning.sluttposisjon line&lt;u00e6&gt;rPosisjon&lt;opencurly&gt;&lt;closecurly&gt;.Line&lt;u00e6&gt;rPosisjonStrekning.sluttposisjon  NO_OP kommunenummer kommunenummer  NO_OP svingeforbudFra.Line&lt;u00e6&gt;rPosisjonPunkt.posisjon svingeforbudFra.Line&lt;u00e6&gt;rPosisjonPunkt.posisjon  NO_OP svingeforbudTil.Line&lt;u00e6&gt;rPosisjonPunkt.posisjon svingeforbudTil.Line&lt;u00e6&gt;rPosisjonPunkt.posisjon  NO_OP _hierarchy_child_id_list&lt;opencurly&gt;&lt;closecurly&gt; _hierarchy_child_id_list&lt;opencurly&gt;&lt;closecurly&gt;  NO_OP _geometry_name _geometry_name  NO_OP _hierarchy_id _hierarchy_id  NO_OP _hierarchy_parent_id _hierarchy_parent_id  NO_OP _part_number _part_number  NO_OP _schemamapper_row_ids _schemamapper_row_ids  NO_OP  funksjon &lt;at&gt;Value&lt;openparen&gt;type&lt;closeparen&gt; SET_TO type type  NO_OP"/>
@@ -6696,6 +6760,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="type"/>
 #!     <XFORM_PARM PARM_NAME="ATTR_LIST_GROUP" PARM_VALUE=""/>
@@ -6845,6 +6910,7 @@
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="funksjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTR_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="trafikkavviser"/>
 #!     <XFORM_PARM PARM_NAME="DIRECTION" PARM_VALUE="Forward (Source To Destination)"/>
@@ -6903,6 +6969,7 @@
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="funksjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTR_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="FME_NULL_VALUE"/>
 #!     <XFORM_PARM PARM_NAME="DIRECTION" PARM_VALUE="Forward (Source To Destination)"/>
@@ -6961,6 +7028,7 @@
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="funksjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTRCHOICE" PARM_VALUE="Selected Attributes"/>
 #!     <XFORM_PARM PARM_NAME="ATTRLIST" PARM_VALUE="type"/>
 #!     <XFORM_PARM PARM_NAME="NEW_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
@@ -7114,6 +7182,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="stedligBeredskap" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="høyfjellsstrekning" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTRCHOICE" PARM_VALUE="Selected Attributes"/>
@@ -7174,6 +7243,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="stedligBeredskap" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="høyfjellsstrekning" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="høyfjellsstrekning"/>
@@ -7226,6 +7296,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="sideveg" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
@@ -7283,6 +7354,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="stedligBeredskap" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
@@ -7340,6 +7412,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="typeHinderHøydebegrensning" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="typeHinderHøydebegrensning"/>
 #!     <XFORM_PARM PARM_NAME="ATTR_LIST_GROUP" PARM_VALUE=""/>
@@ -7392,6 +7465,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="typeHinderH&lt;u00f8&gt;ydebegrensning typeHinder RENAME_SET_DEFAULT "/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
@@ -7441,6 +7515,7 @@
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="funksjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -7499,6 +7574,7 @@
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="funksjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -7540,6 +7616,7 @@
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="funksjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -7901,6 +7978,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -7961,6 +8039,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="SUB_DOC_NAME" PARM_VALUE="node2geom"/>
@@ -8017,6 +8096,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -8055,6 +8135,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -8120,6 +8201,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -8159,6 +8241,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -8198,6 +8281,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -8237,6 +8321,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
@@ -8274,6 +8359,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudFra.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="svingeforbudTil.LineærPosisjonPunkt.posisjon" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="viapunkt" IS_USER_CREATED="false" FEAT_INDEX="4" />
@@ -8349,6 +8435,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -8388,6 +8475,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -8472,6 +8560,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="stedligBeredskap" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="høyfjellsstrekning" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="typeHinder" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -8532,6 +8621,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="stedligBeredskap" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="høyfjellsstrekning" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="typeHinder" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -8571,6 +8661,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="stedligBeredskap" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="høyfjellsstrekning" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="typeHinder" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -8636,6 +8727,7 @@
 #!     <XFORM_ATTR ATTR_NAME="LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="sideveg" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
@@ -8673,6 +8765,7 @@
 #!     <XFORM_ATTR ATTR_NAME="LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="sideveg" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
@@ -8735,6 +8828,7 @@
 #!     <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="tilPos" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="fraPos" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="id id  NO_OP geometri.wkt geometri.wkt  NO_OP metadata.versjon metadata.versjon  NO_OP metadata.type.id metadata.type.id  NO_OP egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.id egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.id  NO_OP egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.enum_id egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.enum_id  NO_OP egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.verdi egenskaper.egenskap&lt;opencurly&gt;&lt;closecurly&gt;.verdi  NO_OP geometri.egengeometri geometri.egengeometri  NO_OP geometri.srid geometri.srid  NO_OP lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.veglenkesekvens lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.veglenkesekvens  NO_OP lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.startposisjon lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.startposisjon  NO_OP lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.sluttposisjon lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;.sluttposisjon  NO_OP lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt; lokasjon.stedfestinger.stedfesting&lt;opencurly&gt;&lt;closecurly&gt;  NO_OP xml_fragment xml_fragment  NO_OP xml_id xml_id  NO_OP xml_matched_element xml_matched_element  NO_OP xml_parent_id xml_parent_id  NO_OP xml_parent_child_pos xml_parent_child_pos  NO_OP fme_feature_type fme_feature_type  NO_OP identifikasjon.Identifikasjon.lokalId identifikasjon.Identifikasjon.lokalId  NO_OP identifikasjon.Identifikasjon.versjonId identifikasjon.Identifikasjon.versjonId  NO_OP identifikasjon.Identifikasjon.navnerom identifikasjon.Identifikasjon.navnerom  NO_OP gml_id gml_id  NO_OP assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.typeId assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.typeId  NO_OP assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.vegobjektId assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.vegobjektId  NO_OP assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.relasjonstype assosiasjoner&lt;opencurly&gt;&lt;closecurly&gt;.relasjonstype  NO_OP epsg epsg  NO_OP Line&lt;u00e6&gt;rPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId netelementid  RENAME_SET_VALUE Line&lt;u00e6&gt;rPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom Line&lt;u00e6&gt;rPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom  NO_OP Line&lt;u00e6&gt;rPosisjonStrekning.startposisjon Line&lt;u00e6&gt;rPosisjonStrekning.startposisjon  NO_OP Line&lt;u00e6&gt;rPosisjonStrekning.sluttposisjon Line&lt;u00e6&gt;rPosisjonStrekning.sluttposisjon  NO_OP kommunenummer kommunenummer  NO_OP _hierarchy_child_id_list&lt;opencurly&gt;&lt;closecurly&gt; _hierarchy_child_id_list&lt;opencurly&gt;&lt;closecurly&gt;  NO_OP _geometry_name _geometry_name  NO_OP _hierarchy_id _hierarchy_id  NO_OP _hierarchy_parent_id _hierarchy_parent_id  NO_OP _part_number _part_number  NO_OP _schemamapper_row_ids _schemamapper_row_ids  NO_OP sideveg sideveg  NO_OP _element_index _element_index  NO_OP Line&lt;u00e6&gt;rPosisjonStrekning.tilPosisjon tilPos  RENAME_SET_VALUE Line&lt;u00e6&gt;rPosisjonStrekning.fraPosisjon fraPos  RENAME_SET_VALUE"/>
@@ -8792,6 +8886,7 @@
 #!     <XFORM_ATTR ATTR_NAME="LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="sideveg" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_element_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="LineærPosisjonStrekning.tilPosisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -8846,6 +8941,7 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Junction"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
@@ -9501,7 +9597,335 @@
 #!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Junction_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="253"
+#!   TYPE="AttributeFilter"
+#!   VERSION="5"
+#!   POSITION="501.30456378182743 -1832.0216369558923"
+#!   BOUNDING_RECT="501.30456378182743 -1832.0216369558923 588.08784397844056 71"
+#!   ORDER="500000000000077"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18578"
+#! >
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;EMPTY&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.versjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.type.id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.enum_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.verdi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.egengeometri" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.srid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.veglenkesekvens" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_fragment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_child_pos" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.versjonId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.typeId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.vegobjektId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.relasjonstype" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="epsg" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;MISSING&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.wkt" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.versjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.type.id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.enum_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.verdi" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.egengeometri" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.srid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.veglenkesekvens" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="xml_fragment" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_child_pos" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.versjonId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.typeId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.vegobjektId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.relasjonstype" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="epsg" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;NULL&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.wkt" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.versjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.type.id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.enum_id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.verdi" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.egengeometri" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.srid" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.veglenkesekvens" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="xml_fragment" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_child_pos" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.versjonId" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.typeId" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.vegobjektId" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.relasjonstype" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="epsg" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.wkt" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.versjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.type.id" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.id" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.enum_id" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.verdi" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.egengeometri" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.srid" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.veglenkesekvens" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="xml_fragment" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_id" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_child_pos" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.versjonId" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.typeId" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.vegobjektId" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.relasjonstype" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="epsg" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <OUTPUT_FEAT NAME="V"/>
+#!     <FEAT_COLLAPSED COLLAPSED="4"/>
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.wkt" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.versjon" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.type.id" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.id" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.enum_id" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.verdi" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.egengeometri" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.srid" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.veglenkesekvens" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="xml_fragment" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_id" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_child_pos" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.versjonId" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.typeId" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.vegobjektId" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.relasjonstype" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="epsg" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <OUTPUT_FEAT NAME="P"/>
+#!     <FEAT_COLLAPSED COLLAPSED="5"/>
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.wkt" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.versjon" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.type.id" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.id" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.enum_id" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.verdi" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.egengeometri" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.srid" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.veglenkesekvens" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="xml_fragment" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_id" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_child_pos" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.versjonId" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.typeId" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.vegobjektId" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.relasjonstype" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="epsg" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <OUTPUT_FEAT NAME="A"/>
+#!     <FEAT_COLLAPSED COLLAPSED="6"/>
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.wkt" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.versjon" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.type.id" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.id" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.enum_id" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.verdi" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.egengeometri" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.srid" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.veglenkesekvens" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="xml_fragment" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_id" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_child_pos" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.versjonId" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.typeId" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.vegobjektId" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.relasjonstype" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="epsg" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="6" />
+#!     <XFORM_PARM PARM_NAME="ATTR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="fase"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_VALUES" PARM_VALUE="&lt;lt&gt;Empty&lt;gt&gt;,&lt;lt&gt;Missing&lt;gt&gt;,&lt;lt&gt;Null&lt;gt&gt;,&lt;lt&gt;Unfiltered&lt;gt&gt;,V,P,A"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_VALUES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeFilter_Vegfase_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="250"
+#!   TYPE="PythonCaller"
+#!   VERSION="4"
+#!   POSITION="-119.04880953571438 -1912.3795833924999"
+#!   BOUNDING_RECT="-119.04880953571438 -1912.3795833924999 -1 -1"
+#!   ORDER="500000000000227"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18578"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.wkt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.versjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metadata.type.id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.enum_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="egenskaper.egenskap{}.verdi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.egengeometri" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="geometri.srid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.veglenkesekvens" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokasjon.stedfestinger.stedfesting{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_fragment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xml_parent_child_pos" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.versjonId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="identifikasjon.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.typeId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.vegobjektId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="assosiasjoner{}.relasjonstype" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="epsg" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.startposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_schemamapper_row_ids" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fase" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE="fase"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;#&lt;space&gt;Template&lt;space&gt;Function&lt;space&gt;interface:&lt;lf&gt;#&lt;space&gt;When&lt;space&gt;using&lt;space&gt;this&lt;space&gt;function&lt;comma&gt;&lt;space&gt;make&lt;space&gt;sure&lt;space&gt;its&lt;space&gt;name&lt;space&gt;is&lt;space&gt;set&lt;space&gt;as&lt;space&gt;the&lt;space&gt;value&lt;space&gt;of&lt;lf&gt;#&lt;space&gt;the&lt;space&gt;&lt;apos&gt;Class&lt;space&gt;or&lt;space&gt;Function&lt;space&gt;to&lt;space&gt;Process&lt;space&gt;Features&lt;apos&gt;&lt;space&gt;transformer&lt;space&gt;parameter&lt;lf&gt;def&lt;space&gt;processFeature&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;fase&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;lokasjon.vegsystemreferanser.vegsystemreferanse.vegsystem.fase&lt;apos&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;if&lt;space&gt;fase&lt;space&gt;is&lt;space&gt;None:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;fase&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;lokasjon.vegsystemreferanser.vegsystemreferanse&lt;opencurly&gt;0&lt;closecurly&gt;.vegsystem.fase&lt;apos&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;feature.setAttribute&lt;openparen&gt;&lt;apos&gt;fase&lt;apos&gt;&lt;comma&gt;&lt;space&gt;fase&lt;closeparen&gt;&lt;lf&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="processFeature"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PythonCaller"/>
 #! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
@@ -9638,9 +10062,9 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="92"
+#!   IDENTIFIER="251"
 #!   SOURCE_NODE="13"
-#!   TARGET_NODE="23"
+#!   TARGET_NODE="250"
 #!   SOURCE_PORT_DESC="fo 0 MAPPED"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
@@ -10408,6 +10832,28 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
+#!   IDENTIFIER="255"
+#!   SOURCE_NODE="250"
+#!   TARGET_NODE="253"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="252"
+#!   SOURCE_NODE="253"
+#!   TARGET_NODE="23"
+#!   SOURCE_PORT_DESC="fo 0 &lt;lt&gt;lt&lt;gt&gt;EMPTY&lt;lt&gt;gt&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
 #!   IDENTIFIER="155"
 #!   SOURCE_NODE="10"
 #!   TARGET_NODE="11"
@@ -10621,6 +11067,17 @@
 #!   SOURCE_NODE="40"
 #!   TARGET_NODE="41"
 #!   SOURCE_PORT_DESC="fo 4 Med"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="256"
+#!   SOURCE_NODE="253"
+#!   TARGET_NODE="23"
+#!   SOURCE_PORT_DESC="fo 4 V"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
 #!   EXECUTION_IDX="0"
@@ -13157,7 +13614,7 @@
 #!   CATEGORY="NVDB"
 #!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Leser og tolker data fra NVDB-API &lt;/p&gt;&#10;"
 #!   DOC_DYNAMIC_INPUT_ATTRS="0"
-#!   DOC_EXTENTS="4486.2 2177.42"
+#!   DOC_EXTENTS="4417.45 2177.42"
 #!   DOC_TOP_LEFT="-2957.91 -556.881"
 #!   FME_DOCUMENT_GUID=""
 #!   FME_DOCUMENT_PRIORGUID=""
@@ -13216,7 +13673,7 @@
 #!   BOUNDING_RECT="-724.77403777483823 1532.7759375693754 1084.1526315607762 1667.1522813328131"
 #!   STICKY="true"
 #!   COLOUR="0.99607843137254903,0.66274509803921566,0.015686274509803921"
-#!   CONTENTS="18 17 36 37 19 35 20 16 39 38 "
+#!   CONTENTS="18 17 36 37 19 35 20 16 "
 #! >
 #! </BOOKMARK>
 #! </BOOKMARKS>
@@ -13963,8 +14420,8 @@
 #! <SUBDOCUMENT_IO
 #!   IDENTIFIER="3"
 #!   NAME="Output"
-#!   POSITION="1528.2861062290663 1156.8192653107401"
-#!   BOUNDING_RECT="1528.2861062290663 1156.8192653107401 -1 -1"
+#!   POSITION="1459.5354187221913 463.06232774136447"
+#!   BOUNDING_RECT="1459.5354187221913 463.06232774136447 -1 -1"
 #!   COLLAPSED="true"
 #!   IS_SOURCE="false"
 #!   ATTR_MODE="0"
@@ -14137,19 +14594,8 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="38"
-#!   SOURCE_NODE="19"
-#!   TARGET_NODE="9"
-#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
 #!   IDENTIFIER="39"
-#!   SOURCE_NODE="20"
+#!   SOURCE_NODE="19"
 #!   TARGET_NODE="9"
 #!   SOURCE_PORT_DESC="fo 0 OUTPUT"
 #!   TARGET_PORT_DESC="fi 0 "
@@ -16644,8 +17090,8 @@ else:
 END_INCLUDE
 DEFAULT_MACRO Vegnett_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(Vegnett_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(Vegnett_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_WORKSPACE_NAME)__Input1569848978 Input Splitter"   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)__Input"   OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)__Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING_FDIV,neste.href,$($(Vegnett_WORKSPACE_NAME)_NESTE.HREF),omr,$($(Vegnett_WORKSPACE_NAME)_OMR),omrNvn,$($(Vegnett_WORKSPACE_NAME)_OMRNVN), FEATURE_TYPE)"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_WORKSPACE_NAME)_Loop1569848978 Input Splitter"   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_Loop"   OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_Loop"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_WORKSPACE_NAME)__Input1569928342 Input Splitter"   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)__Input"   OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)__Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING_FDIV,neste.href,$($(Vegnett_WORKSPACE_NAME)_NESTE.HREF),omr,$($(Vegnett_WORKSPACE_NAME)_OMR),omrNvn,$($(Vegnett_WORKSPACE_NAME)_OMRNVN), FEATURE_TYPE)"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_WORKSPACE_NAME)_Loop1569928342 Input Splitter"   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_Loop"   OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_Loop"
 # -------------------------------------------------------------------------
 FACTORY_DEF * HTTPFactory    FACTORY_NAME $(Vegnett_WORKSPACE_NAME)_HTTPCaller_2       INPUT  FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)__Input"    INPUT  FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_Loop"    TARGET_URL "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>neste.href<closeparen>,$(Vegnett_WORKSPACE_NAME)_HTTPCaller_2)"    HTTP_METHOD GET    SAVE_FILE NO    OUTPUT_FILENAME "<Unused>"    OUTPUT_DIRECTORY "<Unused>"    FILE_EXTENSION "<Unused>"    TARGET_ATTR "_url_contents"    FILE_PATH_ATTR "<Unused>"    UPLOAD_FILE "<Unused>"    UPLOAD_BODY "<Unused>"    MULTIPART_UPLOAD <Unused>    UPLOAD_CONTENT_TYPE "<Unused>"    COMBINED_MULTIPART_TABLE    REQUEST_HEADER_TABLE Accept;application<solidus>vnd.vegvesen.nvdb-v3+xml    ADDITIONAL_URL_PARAMETERS    AUTH_USERNAME "<Unused>"    AUTH_PASSWORD "<Unused>"    AUTH_METHOD "<Unused>"    TARGET_ATTRIBUTE_ENCODING auto-detect    RESPONSE_HEADER_LIST_ATTR "_headers"    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    CONNECTION_TIMEOUT_LENGTH 60    TRANSFER_TIMEOUT_LENGTH 90    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    NAMED_CONNECTION "<Unused>"    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_HTTPCaller_2_Output"    OUTPUT REJECTED FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_HTTPCaller_2_<REJECTED>"
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_WORKSPACE_NAME)_HTTPCaller_2 Output Splitter"   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_HTTPCaller_2_Output"   OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_HTTPCaller_2_Output_0_bMXVl3WdfOc="   OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_HTTPCaller_2_Output_1_naSoGOX5Mbg="
@@ -16676,8 +17122,8 @@ FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY
 Lookup "$(Vegnett_WORKSPACE_NAME)_AttributeValueMapper_6_LOOKUP_TABLE"   B               iBygning   D               tidvisUnderVann   I               p<u00e5>Isbre   J               underIsbre   L               iLuft   O               p<u00e5>Vannoverflaten   S               p<u00e5>Sj<u00f8>bunnen   T               p<u00e5>Terrenget   U               underTerrenget   V               alltidIVann   W               underSj<u00f8>bunnen   X               ukjent   ""              ""   ENCODED_SUPPORTUNICODE
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegnett_WORKSPACE_NAME)_AttributeValueMapper_6    INPUT  FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_AttributeManager_8_OUTPUT"    OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_AttributeValueMapper_6_OUTPUT"         @Lookup($(Vegnett_WORKSPACE_NAME)_AttributeValueMapper_6_LOOKUP_TABLE,"medium",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, medium)
 # -------------------------------------------------------------------------
-Tcl2 proc $(Vegnett_WORKSPACE_NAME)_NullAttributeMapper_62b7ada2_3dfa_4595_939c_3ec704ca38ab13_null_replacer { otherValue newValue regExp } {    set attrs [split {kvalitet.Posisjonskvalitet.m<u00e5>lemetodeH<u00f8>yde kvalitet.Posisjonskvalitet.maksimaltAvvik medium kvalitet.Posisjonskvalitet.n<u00f8>yaktighetH<u00f8>yde kvalitet.Posisjonskvalitet.n<u00f8>yaktighet kvalitet.Posisjonskvalitet.m<u00e5>lemetode kvalitet.Posisjonskvalitet.synbarhet} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {SETNULL}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {DELETEATTR};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegnett_WORKSPACE_NAME)_NullAttributeMapper    INPUT  FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_AttributeValueMapper_6_OUTPUT"    OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_NullAttributeMapper_OUTPUT"         @Tcl2("$(Vegnett_WORKSPACE_NAME)_NullAttributeMapper_62b7ada2_3dfa_4595_939c_3ec704ca38ab13_null_replacer {} {<Unused>} {^<dollar>}")
+Tcl2 proc $(Vegnett_WORKSPACE_NAME)_NullAttributeMapper_62b7ada2_3dfa_4595_939c_3ec704ca38ab15_null_replacer { otherValue newValue regExp } {    set attrs [split {kvalitet.Posisjonskvalitet.m<u00e5>lemetodeH<u00f8>yde kvalitet.Posisjonskvalitet.maksimaltAvvik medium kvalitet.Posisjonskvalitet.n<u00f8>yaktighetH<u00f8>yde kvalitet.Posisjonskvalitet.n<u00f8>yaktighet kvalitet.Posisjonskvalitet.m<u00e5>lemetode kvalitet.Posisjonskvalitet.synbarhet} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {SETNULL}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {DELETEATTR};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegnett_WORKSPACE_NAME)_NullAttributeMapper    INPUT  FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_AttributeValueMapper_6_OUTPUT"    OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_NullAttributeMapper_OUTPUT"         @Tcl2("$(Vegnett_WORKSPACE_NAME)_NullAttributeMapper_62b7ada2_3dfa_4595_939c_3ec704ca38ab15_null_replacer {} {<Unused>} {^<dollar>}")
 # -------------------------------------------------------------------------
 FACTORY_DEF * XFMapFactory    FACTORY_NAME $(Vegnett_WORKSPACE_NAME)_XMLFragmenter_2    INPUT  FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_HTTPCaller_2_Output_0_bMXVl3WdfOc="    XML_STREAM "_url_contents"    XFMAP_FEATURE_PATHS_EXPRESSION "side<solidus>metadata"    XFMAP_FEATURE_PATHS_STRUCTURE "<lf><lt>structure<space>separator=<quote>.<quote><space>map-empty-elements=<quote>yes<quote><space>matched-prefix=<quote>attributes<quote><space>matched-attributes=<quote>yes<quote><space>cardinality=<quote>+<opencurly>?<closecurly><quote><space>structure-prefix=<quote><quote><space>child-position-attribute=<quote><quote><space>except-expression=<quote><quote><space>ui-mode=<quote>basic<quote><space>matched-ancestor-attributes=<quote><quote><solidus><gt><lf>"    MERGE_ATTRIBUTES_FROM_INPUT No    REJECT_FEATURES_WITH_NO_FRAGMENTS YES    OUTPUT MAPPED FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_XMLFragmenter_2_FRAGMENTS"
 # -------------------------------------------------------------------------
@@ -16685,8 +17131,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegnett_WORKSPACE_NAME)_TestFilter   
 FACTORY_DEF * TestFactory FACTORY_NAME $(Vegnett_WORKSPACE_NAME)_TestFilter_Condition_1 INPUT FEATURE_TYPE $(Vegnett_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>returnert<closeparen>,$(Vegnett_WORKSPACE_NAME)_TestFilter) != 0 ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE $(Vegnett_WORKSPACE_NAME)_TestFilter_Flere OUTPUT FAILED FEATURE_TYPE $(Vegnett_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_1
 FACTORY_DEF * TeeFactory FACTORY_NAME $(Vegnett_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE $(Vegnett_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE $(Vegnett_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_WORKSPACE_NAME)_TestFilter <lt>UNFILTERED<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt>"
-FACTORY_DEF * BranchingFactory   TARGET_FACTORY "$(Vegnett_WORKSPACE_NAME)_Loop1569848978 Input Splitter"   FACTORY_NAME "Loop to $(Vegnett_WORKSPACE_NAME)_Loop1569848978 Input Splitter"   MAXIMUM_COUNT -1   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_TestFilter_Flere"   OUTPUT PASSED FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_Loop"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_WORKSPACE_NAME)_Veglenke1569848978 Output Collector"   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_NullAttributeMapper_OUTPUT"   OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_Veglenke"
+FACTORY_DEF * BranchingFactory   TARGET_FACTORY "$(Vegnett_WORKSPACE_NAME)_Loop1569928342 Input Splitter"   FACTORY_NAME "Loop to $(Vegnett_WORKSPACE_NAME)_Loop1569928342 Input Splitter"   MAXIMUM_COUNT -1   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_TestFilter_Flere"   OUTPUT PASSED FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_Loop"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_WORKSPACE_NAME)_Veglenke1569928342 Output Collector"   INPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_NullAttributeMapper_OUTPUT"   OUTPUT FEATURE_TYPE "$(Vegnett_WORKSPACE_NAME)_Veglenke"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(Vegnett_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Vegnett Veglenke Output Renamer/Nuker"   INPUT FEATURE_TYPE Vegnett_Veglenke   OUTPUT FEATURE_TYPE Vegnett_Veglenke
 # -------------------------------------------------------------------------
@@ -16694,7 +17140,7 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeManager_8 (Disabled) Nuker"   
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME AttributeManager_2    INPUT  FEATURE_TYPE Creator_3_CREATED_0_INSJH1LcZDI=    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "ftIDs" "538<semicolon>821<semicolon>105<semicolon>813<semicolon>591<semicolon>606<semicolon>100<semicolon>822<semicolon>573<semicolon>856<semicolon>607<semicolon>107<semicolon>923<semicolon>924<semicolon>721<semicolon>595" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE AttributeManager_2_OUTPUT
 # -------------------------------------------------------------------------
-Tcl2 set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744012_splitDelim [FME_DecodeText {<semicolon>}];      if { [regexp {^([1-9][0-9]*s)+$} [set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744012_splitDelim]] }      {         set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744012_splitWidths [split [regsub -all {s$} {<semicolon>} {}] s];         proc AttributeSplitter_doSplit {}         {            global AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744012_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {ftIDs}]];            set attrNum 0;            set listName [FME_DecodeText {_ftID}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744012_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc AttributeSplitter_doSplit {}         {            global AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744012_splitDelim;            set delim [set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744012_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {ftIDs}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_ftID}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+Tcl2 set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744014_splitDelim [FME_DecodeText {<semicolon>}];      if { [regexp {^([1-9][0-9]*s)+$} [set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744014_splitDelim]] }      {         set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744014_splitWidths [split [regsub -all {s$} {<semicolon>} {}] s];         proc AttributeSplitter_doSplit {}         {            global AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744014_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {ftIDs}]];            set attrNum 0;            set listName [FME_DecodeText {_ftID}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744014_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc AttributeSplitter_doSplit {}         {            global AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744014_splitDelim;            set delim [set AttributeSplitter_d662fb5c_79c7_45c7_ae6f_46d3d8a3744014_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {ftIDs}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_ftID}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
 FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeSplitter    INPUT  FEATURE_TYPE AttributeManager_2_OUTPUT    INPUT  FEATURE_TYPE AttributeManager_8_OUTPUT    OUTPUT FEATURE_TYPE AttributeSplitter_OUTPUT         @Tcl2(AttributeSplitter_doSplit)
 # -------------------------------------------------------------------------
 FACTORY_DEF * ElementFactory    FACTORY_NAME ListExploder_2    INPUT  FEATURE_TYPE AttributeSplitter_OUTPUT    LIST_NAME "_ftID{}"    ELEMENT_NUMBER_FIELD "_element_index"    CLONE_GEOMETRY    ATTR_ACCUM_MODE "HANDLE_CONFLICT"    ATTR_CONFLICT_RES "INCOMING_IF_CONFLICT"    INCOMING_PREFIX "<Unused>"    OUTPUT ELEMENT FEATURE_TYPE ListExploder_2_ELEMENTS         @RemoveAttributes(ElementFactory.baseCloned)
@@ -16710,8 +17156,8 @@ MACRO $(Vegobjekter_WORKSPACE_NAME)_SUB_DOC_NAME Vegobjekter
 MACRO $(Vegobjekter_WORKSPACE_NAME)_NESTE.HREF <at>Value<openparen>href<closeparen>
 DEFAULT_MACRO Vegobjekter_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(Vegobjekter_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(Vegobjekter_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegobjekter_WORKSPACE_NAME)__Input1569848978 Input Splitter"   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)__Input"   OUTPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)__Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING_FDIV,neste.href,$($(Vegobjekter_WORKSPACE_NAME)_NESTE.HREF), FEATURE_TYPE)"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegobjekter_WORKSPACE_NAME)_Loop1569848978 Input Splitter"   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_Loop"   OUTPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_Loop"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegobjekter_WORKSPACE_NAME)__Input1569928342 Input Splitter"   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)__Input"   OUTPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)__Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING_FDIV,neste.href,$($(Vegobjekter_WORKSPACE_NAME)_NESTE.HREF), FEATURE_TYPE)"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegobjekter_WORKSPACE_NAME)_Loop1569928342 Input Splitter"   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_Loop"   OUTPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_Loop"
 # -------------------------------------------------------------------------
 FACTORY_DEF * HTTPFactory    FACTORY_NAME $(Vegobjekter_WORKSPACE_NAME)_HTTPCaller_2       INPUT  FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)__Input"    INPUT  FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_Loop"    TARGET_URL "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>neste.href<closeparen>,$(Vegobjekter_WORKSPACE_NAME)_HTTPCaller_2)"    HTTP_METHOD GET    SAVE_FILE NO    OUTPUT_FILENAME "<Unused>"    OUTPUT_DIRECTORY "<Unused>"    FILE_EXTENSION "<Unused>"    TARGET_ATTR "_url_contents"    FILE_PATH_ATTR "<Unused>"    UPLOAD_FILE "<Unused>"    UPLOAD_BODY "<Unused>"    MULTIPART_UPLOAD <Unused>    UPLOAD_CONTENT_TYPE "<Unused>"    COMBINED_MULTIPART_TABLE    REQUEST_HEADER_TABLE Accept;application<solidus>vnd.vegvesen.nvdb-v3+xml    ADDITIONAL_URL_PARAMETERS    AUTH_USERNAME "<Unused>"    AUTH_PASSWORD "<Unused>"    AUTH_METHOD "<Unused>"    TARGET_ATTRIBUTE_ENCODING auto-detect    RESPONSE_HEADER_LIST_ATTR "_headers"    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    CONNECTION_TIMEOUT_LENGTH 60    TRANSFER_TIMEOUT_LENGTH 90    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    NAMED_CONNECTION "<Unused>"    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_HTTPCaller_2_Output"    OUTPUT REJECTED FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_HTTPCaller_2_<REJECTED>"
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegobjekter_WORKSPACE_NAME)_HTTPCaller_2 Output Splitter"   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_HTTPCaller_2_Output"   OUTPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_HTTPCaller_2_Output_0_VKYyfhAtx08="   OUTPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_HTTPCaller_2_Output_1_eDD2lUsZVgc="
@@ -16738,7 +17184,7 @@ MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function
 MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_RemoveTempAttr
 MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_RemoveSourceAttr
 INCLUDE [ set sourceText {@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>geometri<closeparen>,$(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer)};           set decodedText [FME_DecodeText "$sourceText"];           if ![regexp {@EvaluateExpression\([^)]*STRING_ENCODED,@Value\(([^()]*)\),[^()]*\)} "$decodedText" dummy geomSrcAttr] {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_SetTempAttr @SupplyAttributes(ENCODED,__GeometryReplacerTemp__,\"$sourceText\")";               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_RemoveTempAttr @RemoveAttributes(__GeometryReplacerTemp__)";               set geomSrcAttr __GeometryReplacerTemp__;           } elseif {{Yes} == {Yes} } {                puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_RemoveSourceAttr @RemoveAttributes(\"$geomSrcAttr\")";           };           if {{wkt} == {fmebinary} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE_BINARY,\"$geomSrcAttr\")";           } elseif {{wkt} == {fmehex} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE_BINARY_HEX,\"$geomSrcAttr\")";           } elseif {{wkt} == {fmexml} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE,\"$geomSrcAttr\")";           } elseif {{wkt} == {fmexmlencoded} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ENCODED_STRING,&\"$geomSrcAttr\")";           } elseif {{wkt} == {polyline} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE_POLYLINE,\"$geomSrcAttr\")";           } elseif {{wkt} == {wkt} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @OGCGeometry(from_attribute,wkt,\"$geomSrcAttr\",FLOAT_64)";           } elseif {{wkt} == {wkb} ||                      {wkt} == {wkbhex} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @OGCGeometry(from_attribute,wkt,\"$geomSrcAttr\")";           } elseif {{wkt} == {GEOJSON} ||                     {wkt} == {ESRIJSON} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @JSONGeometry(FROM_ATTRIBUTE,wkt,\"$geomSrcAttr\")";           } elseif {{wkt} == {GEORSS} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @GeoRSSGeometry(FROM_ATTRIBUTE,\"$geomSrcAttr\")";           } elseif {{wkt} == {KML} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @KMLGeometry(FROM_ATTRIBUTE,\"$geomSrcAttr\")";           } elseif {{wkt} == {GML} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @GMLGeometry(FROM_ATTRIBUTE,\"$geomSrcAttr\",<Unused>)";           } elseif {{wkt} == {geohash} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @GeoHash(FROM_ATTRIBUTE,\"$geomSrcAttr\",<Unused>)";           } elseif {{wkt} == {ogeosms} ||                     {wkt} == {geosms}  ||                     {wkt} == {geo} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @OGCGeometry(from_attribute,wkt,\"$geomSrcAttr\")";           } elseif {{wkt} == {mgrs}} {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @MGRS(FROM_MGRS, <Unused>, <Unused>,\"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>geometri<closeparen>,$(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer)\")"           } elseif {{wkt} == {mssql} } {               puts "MACRO $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function @SerializeGeometry(from_attribute,wkt,\"$geomSrcAttr\",<Unused>)";           }; ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer    INPUT  FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_PythonCaller_objekt_stedfestingBasisnett_OUTPUT"    INPUT  FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_PythonCaller_objekt_vegreferanse_OUTPUT"    OUTPUT FEATURE_TYPE ___TOREJECTOR___         @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)         $($(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_SetTempAttr)         $($(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function)         $($(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_RemoveTempAttr)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer    INPUT  FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_PythonCaller_objekt_stedfestingBasisnett_OUTPUT"    OUTPUT FEATURE_TYPE ___TOREJECTOR___         @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)         $($(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_SetTempAttr)         $($(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Function)         $($(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_RemoveTempAttr)
 FACTORY_DEF * TestFactory    FACTORY_NAME $(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)       $($(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_RemoveSourceAttr)
 # -------------------------------------------------------------------------
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegobjekter_WORKSPACE_NAME)_3DForcer    INPUT  FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"    OUTPUT FEATURE_TYPE ___TOREJECTOR___         @ZValue("NaN", "Yes", ___fme_rejection_code___)
@@ -16752,8 +17198,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegobjekter_WORKSPACE_NAME)_TestFilte
 FACTORY_DEF * TestFactory FACTORY_NAME $(Vegobjekter_WORKSPACE_NAME)_TestFilter_Condition_1 INPUT FEATURE_TYPE $(Vegobjekter_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>returnert<closeparen>,$(Vegobjekter_WORKSPACE_NAME)_TestFilter) != 0 ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE $(Vegobjekter_WORKSPACE_NAME)_TestFilter_Flere OUTPUT FAILED FEATURE_TYPE $(Vegobjekter_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_1
 FACTORY_DEF * TeeFactory FACTORY_NAME $(Vegobjekter_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE $(Vegobjekter_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE $(Vegobjekter_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegobjekter_WORKSPACE_NAME)_TestFilter <lt>UNFILTERED<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt>"
-FACTORY_DEF * BranchingFactory   TARGET_FACTORY "$(Vegobjekter_WORKSPACE_NAME)_Loop1569848978 Input Splitter"   FACTORY_NAME "Loop to $(Vegobjekter_WORKSPACE_NAME)_Loop1569848978 Input Splitter"   MAXIMUM_COUNT -1   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_TestFilter_Flere"   OUTPUT PASSED FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_Loop"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegobjekter_WORKSPACE_NAME)_Output1569848978 Output Collector"   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_CoordinateSystemSetter_3_OUTPUT"   OUTPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_Output"
+FACTORY_DEF * BranchingFactory   TARGET_FACTORY "$(Vegobjekter_WORKSPACE_NAME)_Loop1569928342 Input Splitter"   FACTORY_NAME "Loop to $(Vegobjekter_WORKSPACE_NAME)_Loop1569928342 Input Splitter"   MAXIMUM_COUNT -1   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_TestFilter_Flere"   OUTPUT PASSED FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_Loop"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegobjekter_WORKSPACE_NAME)_Output1569928342 Output Collector"   INPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_CoordinateSystemSetter_3_OUTPUT"   OUTPUT FEATURE_TYPE "$(Vegobjekter_WORKSPACE_NAME)_Output"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(Vegobjekter_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Vegobjekter Output Output Renamer/Nuker"   INPUT FEATURE_TYPE Vegobjekter_Output   OUTPUT FEATURE_TYPE Vegobjekter_Output
 # -------------------------------------------------------------------------
@@ -16763,15 +17209,26 @@ FACTORY_DEF * SchemaMappingFactory    FACTORY_NAME SchemaMapper_Mapper    INPUT 
 MACRO SchemaMapper_2_DIRECTIVES FEATURE_TYPE_NAME FORMAT_NAME DELIMITER <semicolon> FIELD_NAMES_LINE 1 DATA_START_LINE 2 SKIP_DUPLICATE_DELIMITERS No FIELD_QUALIFIER_CHARACTER <quote> FIELD_QUALIFIER_ESCAPE_CHARACTER <quote> TRIM_FIELD_NAME_QUALIFIERS Yes CASE_SENSITIVE_FIELD_NAMES Yes ENFORCE_STRICT_SCHEMA No TRIM_FIELD_VALUE_QUALIFIERS Yes PRESERVE_SOURCE_ENCODING No READ_SKIPPED_LINES No SCAN_MAX_ROWS 1000 SCAN_TYPES No SCAN_ADDITIONAL_FIELDS No USE_CUSTOM_SCHEMA NO QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS Yes
 FACTORY_DEF * SchemaMappingFactory    FACTORY_NAME SchemaMapper_2_Mapper    INPUT  FEATURE_TYPE SchemaMapper_MAPPED    INPUT  FEATURE_TYPE SchemaMapper_UNMAPPED    DB_TYPE CSV2    DB_DATASET "$(FME_script_path)\Mappingtabeller\NVDB_ptMapping.csv"    DB_TABLE "CSV"    DB_DIRECTIVES $(SchemaMapper_2_DIRECTIVES)    FILTER_COLUMNS ft_attr ftid    INDEX_MAPPING_COLUMNS "" "" fme_feature_type fme_feature_type    ATTR_MAPPING_COLUMNS ptid name """"""    ROW_ID_ATTR _schemamapper_row_ids    OUTPUT MAPPED FEATURE_TYPE SchemaMapper_2_MAPPED    OUTPUT UNMAPPED FEATURE_TYPE SchemaMapper_2_UNMAPPED
 # -------------------------------------------------------------------------
-Tcl2 proc NullAttributeMapper_3_b83c90d2_a833_48f9_b3d5_4ab87126752714_null_replacer { otherValue newValue regExp } {    set attrs [split {<Unused>} { }];    set decode true;    if { {ALL} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {EMPTY SETNULL}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {EMPTY SETNULL}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} && [regexp $decodedRegExp $attrVal]==1 }          {             set act {DELETEATTR};          };      }      elseif {[string first {MISSINGATTR} {EMPTY SETNULL}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper_3    INPUT  FEATURE_TYPE SchemaMapper_2_MAPPED    INPUT  FEATURE_TYPE SchemaMapper_2_UNMAPPED    OUTPUT FEATURE_TYPE NullAttributeMapper_3_OUTPUT         @Tcl2("NullAttributeMapper_3_b83c90d2_a833_48f9_b3d5_4ab87126752714_null_replacer {} {<Unused>} {}")
+Tcl2 proc NullAttributeMapper_3_b83c90d2_a833_48f9_b3d5_4ab87126752716_null_replacer { otherValue newValue regExp } {    set attrs [split {<Unused>} { }];    set decode true;    if { {ALL} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {EMPTY SETNULL}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {EMPTY SETNULL}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} && [regexp $decodedRegExp $attrVal]==1 }          {             set act {DELETEATTR};          };      }      elseif {[string first {MISSINGATTR} {EMPTY SETNULL}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper_3    INPUT  FEATURE_TYPE SchemaMapper_2_MAPPED    INPUT  FEATURE_TYPE SchemaMapper_2_UNMAPPED    OUTPUT FEATURE_TYPE NullAttributeMapper_3_OUTPUT         @Tcl2("NullAttributeMapper_3_b83c90d2_a833_48f9_b3d5_4ab87126752716_null_replacer {} {<Unused>} {}")
 # -------------------------------------------------------------------------
 MACRO SchemaMapper_3_DIRECTIVES FEATURE_TYPE_NAME FORMAT_NAME DELIMITER <semicolon> FIELD_NAMES_LINE 1 DATA_START_LINE 2 SKIP_DUPLICATE_DELIMITERS No FIELD_QUALIFIER_CHARACTER <quote> FIELD_QUALIFIER_ESCAPE_CHARACTER <quote> TRIM_FIELD_NAME_QUALIFIERS Yes CASE_SENSITIVE_FIELD_NAMES Yes ENFORCE_STRICT_SCHEMA No TRIM_FIELD_VALUE_QUALIFIERS Yes PRESERVE_SOURCE_ENCODING No READ_SKIPPED_LINES No SCAN_MAX_ROWS 1000 SCAN_TYPES No SCAN_ADDITIONAL_FIELDS No USE_CUSTOM_SCHEMA NO EXPOSE_ATTRS_GROUP FME_DISCLOSURE_CLOSED QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS Yes
 FACTORY_DEF * SchemaMappingFactory    FACTORY_NAME SchemaMapper_3_Mapper    INPUT  FEATURE_TYPE NullAttributeMapper_3_OUTPUT    DB_TYPE CSV2    DB_DATASET "$(FME_script_path)\Mappingtabeller\NVDB_ftMapping.csv"    DB_TABLE "CSV"    DB_DIRECTIVES $(SchemaMapper_3_DIRECTIVES)    FILTER_COLUMNS    INDEX_MAPPING_COLUMNS ftid name fme_feature_type fme_feature_type    ATTR_MAPPING_COLUMNS    ROW_ID_ATTR _schemamapper_row_ids    OUTPUT MAPPED FEATURE_TYPE SchemaMapper_3_MAPPED
 # -------------------------------------------------------------------------
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+FACTORY_DEF * PythonFactory    FACTORY_NAME PythonCaller    INPUT  FEATURE_TYPE SchemaMapper_3_MAPPED    SYMBOL_NAME processFeature    PYTHON_NAMESPACE FMEOBJECTS    SOURCE_CODE import<space>fme<lf>import<space>fmeobjects<lf>#<space>Template<space>Function<space>interface:<lf>#<space>When<space>using<space>this<space>function<comma><space>make<space>sure<space>its<space>name<space>is<space>set<space>as<space>the<space>value<space>of<lf>#<space>the<space><apos>Class<space>or<space>Function<space>to<space>Process<space>Features<apos><space>transformer<space>parameter<lf>def<space>processFeature<openparen>feature<closeparen>:<lf><space><space><space><space>fase<space>=<space>feature.getAttribute<openparen><apos>lokasjon.vegsystemreferanser.vegsystemreferanse.vegsystem.fase<apos><closeparen><lf><space><space><space><space>if<space>fase<space>is<space>None:<lf><space><space><space><space><space><space><space><space>fase<space>=<space>feature.getAttribute<openparen><apos>lokasjon.vegsystemreferanser.vegsystemreferanse<opencurly>0<closecurly>.vegsystem.fase<apos><closeparen><lf><space><space><space><space>feature.setAttribute<openparen><apos>fase<apos><comma><space>fase<closeparen><lf>    OUTPUT PYOUTPUT FEATURE_TYPE PythonCaller_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeFilter_Vegfase_2    INPUT  FEATURE_TYPE PythonCaller_OUTPUT    OUTPUT FEATURE_TYPE AttributeFilter_Vegfase_2_FILTER
+FACTORY_DEF * AttributeFilterFactory FACTORY_NAME AttributeFilter_Vegfase_2_Filter COMMAND_PARM_EVALUATION SINGLE_PASS INPUT FEATURE_TYPE AttributeFilter_Vegfase_2_FILTER FILTER_ATTRIBUTE fase FILTER_VALUES <lt>EMPTY<gt> <lt>MISSING<gt> <lt>NULL<gt> <lt>UNFILTERED<gt> V P A OUTPUT <lt>EMPTY<gt> FEATURE_TYPE AttributeFilter_Vegfase_2_<lt>EMPTY<gt> OUTPUT <lt>MISSING<gt> FEATURE_TYPE AttributeFilter_Vegfase_2_<lt>MISSING<gt> OUTPUT <lt>NULL<gt> FEATURE_TYPE AttributeFilter_Vegfase_2_<lt>NULL<gt> OUTPUT <lt>UNFILTERED<gt> FEATURE_TYPE AttributeFilter_Vegfase_2_<lt>UNFILTERED<gt> OUTPUT V FEATURE_TYPE AttributeFilter_Vegfase_2_V OUTPUT P FEATURE_TYPE AttributeFilter_Vegfase_2_P OUTPUT A FEATURE_TYPE AttributeFilter_Vegfase_2_A
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeFilter_Vegfase_2 <lt>MISSING<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE AttributeFilter_Vegfase_2_<lt>MISSING<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeFilter_Vegfase_2 <lt>NULL<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE AttributeFilter_Vegfase_2_<lt>NULL<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeFilter_Vegfase_2 <lt>UNFILTERED<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE AttributeFilter_Vegfase_2_<lt>UNFILTERED<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeFilter_Vegfase_2 P Transformer Output Nuker"   INPUT FEATURE_TYPE AttributeFilter_Vegfase_2_P
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeFilter_Vegfase_2 A Transformer Output Nuker"   INPUT FEATURE_TYPE AttributeFilter_Vegfase_2_A
+# -------------------------------------------------------------------------
 # Expose all attributes.  This ensures that if you expose fme_dataset, you will get it.
 READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer    INPUT  FEATURE_TYPE SchemaMapper_3_MAPPED    OUTPUT FEATURE_TYPE AttributeExposer_OUTPUT
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer    INPUT  FEATURE_TYPE AttributeFilter_Vegfase_2_V    INPUT  FEATURE_TYPE AttributeFilter_Vegfase_2_<lt>EMPTY<gt>    OUTPUT FEATURE_TYPE AttributeExposer_OUTPUT
 # -------------------------------------------------------------------------
 INCLUDE [    set macroLine "MACRO AttributeRemover_4_LIST_EXP ";    foreach attr [split ""] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "\\{\[0-9\]+\\}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
 FACTORY_DEF {*} TeeFactory    FACTORY_NAME AttributeRemover_4    INPUT  FEATURE_TYPE AttributeExposer_OUTPUT    OUTPUT { FEATURE_TYPE AttributeRemover_4_OUTPUT        @RemoveAttributes(fme_encoded,senterlinje,posisjon)        @RemoveAttributes(fme_pcre_match"$(AttributeRemover_4_LIST_EXP)")         }
@@ -16791,8 +17248,8 @@ FACTORY_DEF * PythonFactory    FACTORY_NAME PythonCaller_stedlig_beredskap    IN
 # -------------------------------------------------------------------------
 FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer_4    INPUT  FEATURE_TYPE PythonCaller_stedlig_beredskap_OUTPUT    OUTPUT FEATURE_TYPE AttributeExposer_4_OUTPUT
 # -------------------------------------------------------------------------
-Tcl2 proc NullAttributeMapper_6_3c6d64e6_97df_4ff3_b640_4a343e1ec1a714_null_replacer { otherValue newValue regExp } {    set attrs [split {h<u00f8>yfjellsstrekning} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL EMPTY MISSINGATTR}] != -1} {                 set act {SETVALUE};             };          }          elseif { [string first {EMPTY} {SETNULL EMPTY MISSINGATTR}] != -1 && $attrVal == {}} {             set act {SETVALUE};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {SETVALUE};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {SETVALUE};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL EMPTY MISSINGATTR}] != -1} {             set act {SETVALUE};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper_6    INPUT  FEATURE_TYPE AttributeExposer_4_OUTPUT    OUTPUT FEATURE_TYPE NullAttributeMapper_6_OUTPUT         @Tcl2("NullAttributeMapper_6_3c6d64e6_97df_4ff3_b640_4a343e1ec1a714_null_replacer {} {uavklart} {}")
+Tcl2 proc NullAttributeMapper_6_3c6d64e6_97df_4ff3_b640_4a343e1ec1a716_null_replacer { otherValue newValue regExp } {    set attrs [split {h<u00f8>yfjellsstrekning} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL EMPTY MISSINGATTR}] != -1} {                 set act {SETVALUE};             };          }          elseif { [string first {EMPTY} {SETNULL EMPTY MISSINGATTR}] != -1 && $attrVal == {}} {             set act {SETVALUE};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {SETVALUE};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {SETVALUE};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL EMPTY MISSINGATTR}] != -1} {             set act {SETVALUE};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper_6    INPUT  FEATURE_TYPE AttributeExposer_4_OUTPUT    OUTPUT FEATURE_TYPE NullAttributeMapper_6_OUTPUT         @Tcl2("NullAttributeMapper_6_3c6d64e6_97df_4ff3_b640_4a343e1ec1a716_null_replacer {} {uavklart} {}")
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME AttributeManager    INPUT  FEATURE_TYPE FeatureTypeFilter_2_Gågate    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "fme_feature_type" "G<u00e5>gatereguleringer" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE AttributeManager_OUTPUT
 # -------------------------------------------------------------------------
@@ -16827,8 +17284,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper    INPUT  FEATURE_
 Lookup AttributeValueMapper_2_LOOKUP_TABLE   9975            l<u00e5>stBom   9971            r<u00f8>rgelender   9972            steinblokk   9973            newJersey   9970            betongkjegle   9974            bussluse   11799           trafikkavviser   11800           bilsperre   13369           B_Mm_DAutomatisk<u00c5>pner   ""              FME_NULL_VALUE   ENCODED_SUPPORTUNICODE
 FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_2    INPUT  FEATURE_TYPE AttributeValueMapper_OUTPUT    OUTPUT FEATURE_TYPE AttributeValueMapper_2_OUTPUT         @Lookup(AttributeValueMapper_2_LOOKUP_TABLE,"type",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, type)
 # -------------------------------------------------------------------------
-Tcl2 proc NullAttributeMapper_5_5ade2197_c286_4e0e_b743_ab505590806314_null_replacer { otherValue newValue regExp } {    set attrs [split {type} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {SETNULL}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {DELETEATTR};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper_5    INPUT  FEATURE_TYPE AttributeValueMapper_2_OUTPUT    OUTPUT FEATURE_TYPE NullAttributeMapper_5_OUTPUT         @Tcl2("NullAttributeMapper_5_5ade2197_c286_4e0e_b743_ab505590806314_null_replacer {} {<Unused>} {}")
+Tcl2 proc NullAttributeMapper_5_5ade2197_c286_4e0e_b743_ab505590806316_null_replacer { otherValue newValue regExp } {    set attrs [split {type} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {SETNULL}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {DELETEATTR};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper_5    INPUT  FEATURE_TYPE AttributeValueMapper_2_OUTPUT    OUTPUT FEATURE_TYPE NullAttributeMapper_5_OUTPUT         @Tcl2("NullAttributeMapper_5_5ade2197_c286_4e0e_b743_ab505590806316_null_replacer {} {<Unused>} {}")
 # -------------------------------------------------------------------------
 Tcl2 proc ListIndexer_5_indexer {index numElements prefix} {    if {$index < 0 } {       set index [expr $numElements + $index];    };    regsub \"{}\" {lineærPosisjon{}} \"{$index}\" listWithIndex;    regsub \"{}\" {lineærPosisjon{}} {} listBase;    set complexListExp "$listWithIndex\.";    set prefixLength [expr [string length $complexListExp]-1];    set prefix [FME_DecodeText $prefix];    foreach attr [FME_AttributeNames] {      set newAttr {};      if {$attr == $listWithIndex} {        set newAttr $listBase;      } elseif {[string first $complexListExp $attr] == 0} {        set newAttr [string replace $attr 0 $prefixLength];      };      if {$newAttr != {}} {          if {$prefix != {} } {            set newAttr $prefix$newAttr;          };          if {[string first {fme_} $newAttr] != 0} {              set first [string first {fme_} $newAttr];              lappend attrsToCopy $newAttr $attr;          };      };    };    if {[info exists attrsToCopy] && [llength $attrsToCopy] > 0} {      eval FME_Execute CopyAttributes $attrsToCopy;    }; }
 FACTORY_DEF * TestFactory    FACTORY_NAME ListIndexer_5_IntTester    INPUT  FEATURE_TYPE NullAttributeMapper_5_OUTPUT    TEST "0" TYPE INT ENCODED    OUTPUT PASSED FEATURE_TYPE __toOutput__
@@ -16852,7 +17309,7 @@ MACRO $(node2geom_WORKSPACE_NAME)_nvdbApiAdr $(nvdbApiAdr)
 MACRO $(node2geom_WORKSPACE_NAME)_namespace vegvesen.no.nvdb
 DEFAULT_MACRO node2geom_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(node2geom_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(node2geom_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(node2geom_WORKSPACE_NAME)_Input1569848978 Input Splitter"   INPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING_FDIV,viapunkt,$($(node2geom_WORKSPACE_NAME)_VIAPUNKT), FEATURE_TYPE)"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(node2geom_WORKSPACE_NAME)_Input1569928342 Input Splitter"   INPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING_FDIV,viapunkt,$($(node2geom_WORKSPACE_NAME)_VIAPUNKT), FEATURE_TYPE)"
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(node2geom_WORKSPACE_NAME)_AttributeCreator_URL    INPUT  FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_Input"    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "href" "SET_TO" "$($(node2geom_WORKSPACE_NAME)_nvdbApiAdr$encode)vegnett<solidus>noder<solidus>$($(node2geom_WORKSPACE_NAME)_VIAPUNKT)" }    OUTPUT OUTPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_AttributeCreator_URL_OUTPUT"
 # -------------------------------------------------------------------------
@@ -16864,7 +17321,7 @@ FACTORY_DEF * XFMapFactory    FACTORY_NAME $(node2geom_WORKSPACE_NAME)_XMLFlatte
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(node2geom_WORKSPACE_NAME)_AttributeExposer    INPUT  FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_XMLFlattener_OUTPUT"    OUTPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_AttributeExposer_OUTPUT"
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME $(node2geom_WORKSPACE_NAME)_AttributeManager    INPUT  FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_AttributeExposer_OUTPUT"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "href" "href" "" "REMOVE" }      ATTR_ACTION { "_headers<opencurly><closecurly>.name" "_headers<opencurly><closecurly>.name" "" "REMOVE" }      ATTR_ACTION { "_headers<opencurly><closecurly>.value" "_headers<opencurly><closecurly>.value" "" "REMOVE" }      ATTR_ACTION { "_url_contents" "_url_contents" "" "REMOVE" }      ATTR_ACTION { "_http_status_code" "_http_status_code" "" "REMOVE" }      ATTR_ACTION { "geometri.wkt" "geom" "" "RENAME_SET_VALUE" }    OUTPUT OUTPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_AttributeManager_OUTPUT"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(node2geom_WORKSPACE_NAME)_Output1569848978 Output Collector"   INPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_AttributeManager_OUTPUT"   OUTPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_Output"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(node2geom_WORKSPACE_NAME)_Output1569928342 Output Collector"   INPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_AttributeManager_OUTPUT"   OUTPUT FEATURE_TYPE "$(node2geom_WORKSPACE_NAME)_Output"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(node2geom_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "node2geom Output Output Renamer/Nuker"   INPUT FEATURE_TYPE node2geom_Output   OUTPUT FEATURE_TYPE node2geom_Output
 # -------------------------------------------------------------------------
@@ -16900,16 +17357,16 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME GeometryFilter_InputPassThrough    INPU
 FACTORY_DEF $(INSTANCE_FILTERING) TestFactory    FACTORY_NAME GeometryFilter_InstanceTest    INPUT FEATURE_TYPE GeometryFilter___Input___    TEST @Geometry(IS_GEOMETRY_INSTANCE) == 1    OUTPUT PASSED FEATURE_TYPE $(OUTPUT_INSTANCE_FTYPE)    OUTPUT FAILED FEATURE_TYPE GeometryFilter___Input___
 FACTORY_DEF $(COLLECTION_HANDLING) TestFactory    FACTORY_NAME GeometryFilter_CollectionTest    INPUT FEATURE_TYPE GeometryFilter___Input___    TEST &fme_type == "fme_collection"    OUTPUT FAILED FEATURE_TYPE GeometryFilter___Not_Collection___    OUTPUT PASSED FEATURE_TYPE GeometryFilter___Collection___
 FACTORY_DEF $(COLLECTION_HANDLING) DeaggregateFactory    FACTORY_NAME GeometryFilter_Deagg    INPUT FEATURE_TYPE GeometryFilter___Collection___    HOMOGENIZE_COLLECTIONS YES    RECURSIVE YES    SET_FME_TYPE YES    INSTANTIATE_GEOMETRY_INSTANCES_NEW <Unused>    OUTPUT POINT FEATURE_TYPE GeometryFilter___HomogeneousAggregate___    OUTPUT LINE FEATURE_TYPE GeometryFilter___HomogeneousAggregate___    OUTPUT POLYGON FEATURE_TYPE GeometryFilter___HomogeneousAggregate___    OUTPUT DONUT FEATURE_TYPE GeometryFilter___HomogeneousAggregate___    OUTPUT AGGREGATE FEATURE_TYPE GeometryFilter___HomogeneousAggregate___
-FACTORY_DEF * TeeFactory    FACTORY_NAME GeometryFilter_RouterPrepper    INPUT FEATURE_TYPE GeometryFilter___HomogeneousAggregate___    INPUT FEATURE_TYPE GeometryFilter___Not_Collection___    INPUT FEATURE_TYPE GeometryFilter___Input___    OUTPUT FEATURE_TYPE GeometryFilter___Prepped___        GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4515_targetFeatureType @Lookup(GeometryFilter_RouterTable,&fme_type)
-FACTORY_DEF * TestFactory    FACTORY_NAME GeometryFilter_Router    INPUT FEATURE_TYPE GeometryFilter___Prepped___    TEST @Value(GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4515_targetFeatureType) != "not_selected"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(@Value(GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4515_targetFeatureType))                                 @RemoveAttributes(GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4515_targetFeatureType)    OUTPUT FAILED FEATURE_TYPE GeometryFilter_<UNFILTERED>        @RemoveAttributes(GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4515_targetFeatureType)
+FACTORY_DEF * TeeFactory    FACTORY_NAME GeometryFilter_RouterPrepper    INPUT FEATURE_TYPE GeometryFilter___HomogeneousAggregate___    INPUT FEATURE_TYPE GeometryFilter___Not_Collection___    INPUT FEATURE_TYPE GeometryFilter___Input___    OUTPUT FEATURE_TYPE GeometryFilter___Prepped___        GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4517_targetFeatureType @Lookup(GeometryFilter_RouterTable,&fme_type)
+FACTORY_DEF * TestFactory    FACTORY_NAME GeometryFilter_Router    INPUT FEATURE_TYPE GeometryFilter___Prepped___    TEST @Value(GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4517_targetFeatureType) != "not_selected"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(@Value(GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4517_targetFeatureType))                                 @RemoveAttributes(GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4517_targetFeatureType)    OUTPUT FAILED FEATURE_TYPE GeometryFilter_<UNFILTERED>        @RemoveAttributes(GeometryFilter_5a2552b2_3974_496d_8880_7618c8c48f4517_targetFeatureType)
 # -------------------------------------------------------------------------
-Tcl2 proc GeometryPropertySetter_3_8f157927_320e_4de4_90ce_6463aa3bd88915_createDomain { in_domainName } {    set domainName $in_domainName;    if { {<Unused>} != {Global} }    {       set xFormName [FME_EncodeText {GeometryPropertySetter_3_}];       set domainName $xFormName$domainName;    };    return $domainName; }
+Tcl2 proc GeometryPropertySetter_3_8f157927_320e_4de4_90ce_6463aa3bd88917_createDomain { in_domainName } {    set domainName $in_domainName;    if { {<Unused>} != {Global} }    {       set xFormName [FME_EncodeText {GeometryPropertySetter_3_}];       set domainName $xFormName$domainName;    };    return $domainName; }
 INCLUDE [    set macroLine "MACRO GeometryPropertySetter_3_SRC_ATTRS_EXP ";    puts $macroLine; ]
 FACTORY_DEF {*} GQueryFactory    FACTORY_NAME GeometryPropertySetter_3_GQuery    INPUT  FEATURE_TYPE GeometryFilter_AREA    ACTION SET_GEOMNAME    PARAMETER yes "omr<u00e5>de"    OUTPUT RESULT FEATURE_TYPE GeometryPropertySetter_3___RemoveAttrs___
 FACTORY_DEF <Unused> TeeFactory    FACTORY_NAME GeometryPropertySetter_3_AttrRemover    INPUT FEATURE_TYPE GeometryPropertySetter_3___RemoveAttrs___    OUTPUT FEATURE_TYPE *       @RemoveAttributes(fme_encoded"$(GeometryPropertySetter_3_SRC_ATTRS_EXP)")
 FACTORY_DEF * TeeFactory    FACTORY_NAME GeometryPropertySetter_3_Outputter    INPUT FEATURE_TYPE GeometryPropertySetter_3___RemoveAttrs___    OUTPUT FEATURE_TYPE GeometryPropertySetter_3_SET
 # -------------------------------------------------------------------------
-Tcl2 proc GeometryPropertySetter_4_af0f90e1_7faf_4eb4_9fd3_f482c39c573415_createDomain { in_domainName } {    set domainName $in_domainName;    if { {<Unused>} != {Global} }    {       set xFormName [FME_EncodeText {GeometryPropertySetter_4_}];       set domainName $xFormName$domainName;    };    return $domainName; }
+Tcl2 proc GeometryPropertySetter_4_af0f90e1_7faf_4eb4_9fd3_f482c39c573417_createDomain { in_domainName } {    set domainName $in_domainName;    if { {<Unused>} != {Global} }    {       set xFormName [FME_EncodeText {GeometryPropertySetter_4_}];       set domainName $xFormName$domainName;    };    return $domainName; }
 INCLUDE [    set macroLine "MACRO GeometryPropertySetter_4_SRC_ATTRS_EXP ";    puts $macroLine; ]
 FACTORY_DEF {*} GQueryFactory    FACTORY_NAME GeometryPropertySetter_4_GQuery    INPUT  FEATURE_TYPE GeometryFilter_LINE    ACTION SET_GEOMNAME    PARAMETER yes "senterlinje"    OUTPUT RESULT FEATURE_TYPE GeometryPropertySetter_4___RemoveAttrs___
 FACTORY_DEF <Unused> TeeFactory    FACTORY_NAME GeometryPropertySetter_4_AttrRemover    INPUT FEATURE_TYPE GeometryPropertySetter_4___RemoveAttrs___    OUTPUT FEATURE_TYPE *       @RemoveAttributes(fme_encoded"$(GeometryPropertySetter_4_SRC_ATTRS_EXP)")
@@ -16918,7 +17375,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME GeometryPropertySetter_4_Outputter    I
 INCLUDE [    set macroLine "MACRO AttributeRemover_LIST_EXP ";    foreach attr [split ""] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "\\{\[0-9\]+\\}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
 FACTORY_DEF {*} TeeFactory    FACTORY_NAME AttributeRemover    INPUT  FEATURE_TYPE GeometryPropertySetter_4_SET    OUTPUT { FEATURE_TYPE AttributeRemover_OUTPUT        @RemoveAttributes(fme_encoded,posisjon)        @RemoveAttributes(fme_pcre_match"$(AttributeRemover_LIST_EXP)")         }
 # -------------------------------------------------------------------------
-Tcl2 proc GeometryPropertySetter_df86aad0_c4a2_45cc_9cc8_81e37706b5a115_createDomain { in_domainName } {    set domainName $in_domainName;    if { {<Unused>} != {Global} }    {       set xFormName [FME_EncodeText {GeometryPropertySetter_}];       set domainName $xFormName$domainName;    };    return $domainName; }
+Tcl2 proc GeometryPropertySetter_df86aad0_c4a2_45cc_9cc8_81e37706b5a117_createDomain { in_domainName } {    set domainName $in_domainName;    if { {<Unused>} != {Global} }    {       set xFormName [FME_EncodeText {GeometryPropertySetter_}];       set domainName $xFormName$domainName;    };    return $domainName; }
 INCLUDE [    set macroLine "MACRO GeometryPropertySetter_SRC_ATTRS_EXP ";    puts $macroLine; ]
 FACTORY_DEF {*} GQueryFactory    FACTORY_NAME GeometryPropertySetter_GQuery    INPUT  FEATURE_TYPE GeometryFilter_POINT    ACTION SET_GEOMNAME    PARAMETER yes "posisjon"    OUTPUT RESULT FEATURE_TYPE GeometryPropertySetter___RemoveAttrs___
 FACTORY_DEF <Unused> TeeFactory    FACTORY_NAME GeometryPropertySetter_AttrRemover    INPUT FEATURE_TYPE GeometryPropertySetter___RemoveAttrs___    OUTPUT FEATURE_TYPE *       @RemoveAttributes(fme_encoded"$(GeometryPropertySetter_SRC_ATTRS_EXP)")
@@ -16938,7 +17395,7 @@ DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
 # [PR#45549] The Data Inspector will limit the maximum number of features
 # it reads on WIN32, so we will correspondingly limit the number of
 # features we record here using the MAX_FEATURES_TO_RECORD directive.
-FACTORY_DEF * RecorderFactory    FACTORY_NAME Fagdata_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA id,varchar<openparen>255<closeparen>,geometri.wkt,varchar<openparen>255<closeparen>,metadata.versjon,varchar<openparen>255<closeparen>,metadata.type.id,varchar<openparen>255<closeparen>,geometri.egengeometri,varchar<openparen>255<closeparen>,geometri.srid,varchar<openparen>255<closeparen>,xml_fragment,varchar<openparen>255<closeparen>,xml_id,varchar<openparen>255<closeparen>,xml_matched_element,varchar<openparen>255<closeparen>,xml_parent_id,varchar<openparen>255<closeparen>,xml_parent_child_pos,varchar<openparen>255<closeparen>,fme_feature_type,varchar<openparen>255<closeparen>,identifikasjon.Identifikasjon.lokalId,varchar<openparen>255<closeparen>,identifikasjon.Identifikasjon.versjonId,varchar<openparen>255<closeparen>,identifikasjon.Identifikasjon.navnerom,varchar<openparen>255<closeparen>,gml_id,varchar<openparen>255<closeparen>,epsg,varchar<openparen>255<closeparen>,kommunenummer,varchar<openparen>255<closeparen>,_schemamapper_row_ids,varchar<openparen>255<closeparen>,svingeforbudFra.Line<u00e6>rPosisjonPunkt.posisjon,varchar<openparen>255<closeparen>,svingeforbudTil.Line<u00e6>rPosisjonPunkt.posisjon,varchar<openparen>255<closeparen>,viapunkt,varchar<openparen>255<closeparen>,stedligBeredskap,varchar<openparen>255<closeparen>,h<u00f8>yfjellsstrekning,varchar<openparen>255<closeparen>,typeHinder,varchar<openparen>255<closeparen>,trafikkreguleringer,varchar<openparen>255<closeparen>,line<u00e6>rPosisjon.Line<u00e6>rPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId,varchar<openparen>255<closeparen>,line<u00e6>rPosisjon.Line<u00e6>rPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom,varchar<openparen>255<closeparen>,line<u00e6>rPosisjon.Line<u00e6>rPosisjonStrekning.startposisjon,varchar<openparen>255<closeparen>,line<u00e6>rPosisjon.Line<u00e6>rPosisjonStrekning.sluttposisjon,varchar<openparen>255<closeparen>,funksjon,varchar<openparen>255<closeparen>,type,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+FACTORY_DEF * RecorderFactory    FACTORY_NAME Fagdata_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA id,varchar<openparen>255<closeparen>,geometri.wkt,varchar<openparen>255<closeparen>,metadata.versjon,varchar<openparen>255<closeparen>,metadata.type.id,varchar<openparen>255<closeparen>,geometri.egengeometri,varchar<openparen>255<closeparen>,geometri.srid,varchar<openparen>255<closeparen>,xml_fragment,varchar<openparen>255<closeparen>,xml_id,varchar<openparen>255<closeparen>,xml_matched_element,varchar<openparen>255<closeparen>,xml_parent_id,varchar<openparen>255<closeparen>,xml_parent_child_pos,varchar<openparen>255<closeparen>,fme_feature_type,varchar<openparen>255<closeparen>,identifikasjon.Identifikasjon.lokalId,varchar<openparen>255<closeparen>,identifikasjon.Identifikasjon.versjonId,varchar<openparen>255<closeparen>,identifikasjon.Identifikasjon.navnerom,varchar<openparen>255<closeparen>,gml_id,varchar<openparen>255<closeparen>,epsg,varchar<openparen>255<closeparen>,kommunenummer,varchar<openparen>255<closeparen>,_schemamapper_row_ids,varchar<openparen>255<closeparen>,fase,varchar<openparen>255<closeparen>,svingeforbudFra.Line<u00e6>rPosisjonPunkt.posisjon,varchar<openparen>255<closeparen>,svingeforbudTil.Line<u00e6>rPosisjonPunkt.posisjon,varchar<openparen>255<closeparen>,viapunkt,varchar<openparen>255<closeparen>,stedligBeredskap,varchar<openparen>255<closeparen>,h<u00f8>yfjellsstrekning,varchar<openparen>255<closeparen>,typeHinder,varchar<openparen>255<closeparen>,trafikkreguleringer,varchar<openparen>255<closeparen>,line<u00e6>rPosisjon.Line<u00e6>rPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId,varchar<openparen>255<closeparen>,line<u00e6>rPosisjon.Line<u00e6>rPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom,varchar<openparen>255<closeparen>,line<u00e6>rPosisjon.Line<u00e6>rPosisjonStrekning.startposisjon,varchar<openparen>255<closeparen>,line<u00e6>rPosisjon.Line<u00e6>rPosisjonStrekning.sluttposisjon,varchar<openparen>255<closeparen>,funksjon,varchar<openparen>255<closeparen>,type,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
 # -------------------------------------------------------------------------
 FME_PYTHON_PATH "$(FME_MF_DIR)"
 FACTORY_DEF * PythonFactory    FACTORY_NAME PythonCaller_sideveg    INPUT  FEATURE_TYPE FeatureTypeFilter_2_Gate    SYMBOL_NAME sideveg    PYTHON_NAMESPACE FMEOBJECTS    SOURCE_CODE import<space>fme<lf>import<space>fmeobjects<lf><lf>ns=<apos>vegvesen.no.nvdb<apos><space>#<space>FME_MacroValues<openbracket><apos>namespace<apos><closebracket><lf><lf>def<space>sideveg<openparen>feature<closeparen>:<lf><space><space><space><space>i<space>=<space>0<lf><space><space><space><space>while<space>True:<lf><space><space><space><space><space><space><space><space>t<space>=<space>feature.getAttribute<openparen><apos>egenskaper.egenskap<opencurly>%d<closecurly>.navn<apos><space>%<space>i<closeparen><space><space><space><space><lf><space><space><space><space><space><space><space><space>if<space>t<space>and<space>t<space>==<space><apos>Sideveg<apos>:<lf><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space>v<space>=<space>feature.getAttribute<openparen><apos>egenskaper.egenskap<opencurly>%d<closecurly>.verdi<apos><space>%<space>i<closeparen><lf><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space>feature.setAttribute<openparen><apos>sideveg<apos><comma><space>v<closeparen><lf><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space><space>break<lf><space><space><space><space><space><space><space><space>elif<space>not<space>t:<lf><space><space><space><space><space><space><space><space><space><space><space><space>break<lf><space><space><space><space><space><space><space><space>i<space>+=<space>1<space><space><space><lf><space>    OUTPUT PYOUTPUT FEATURE_TYPE PythonCaller_sideveg_OUTPUT
@@ -16979,8 +17436,8 @@ else:
 END_INCLUDE
 DEFAULT_MACRO Vegnett_segmentert_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(Vegnett_segmentert_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(Vegnett_segmentert_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_segmentert_WORKSPACE_NAME)__Input1569848978 Input Splitter"   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)__Input"   OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)__Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING_FDIV,neste.href,$($(Vegnett_segmentert_WORKSPACE_NAME)_NESTE.HREF),omr,$($(Vegnett_segmentert_WORKSPACE_NAME)_OMR),omrNvn,$($(Vegnett_segmentert_WORKSPACE_NAME)_OMRNVN), FEATURE_TYPE)"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop1569848978 Input Splitter"   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop"   OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_segmentert_WORKSPACE_NAME)__Input1569928342 Input Splitter"   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)__Input"   OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)__Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING_FDIV,neste.href,$($(Vegnett_segmentert_WORKSPACE_NAME)_NESTE.HREF),omr,$($(Vegnett_segmentert_WORKSPACE_NAME)_OMR),omrNvn,$($(Vegnett_segmentert_WORKSPACE_NAME)_OMRNVN), FEATURE_TYPE)"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop1569928342 Input Splitter"   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop"   OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop"
 # -------------------------------------------------------------------------
 FACTORY_DEF * HTTPFactory    FACTORY_NAME $(Vegnett_segmentert_WORKSPACE_NAME)_HTTPCaller_2       INPUT  FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)__Input"    INPUT  FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop"    TARGET_URL "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>neste.href<closeparen>,$(Vegnett_segmentert_WORKSPACE_NAME)_HTTPCaller_2)"    HTTP_METHOD GET    SAVE_FILE NO    OUTPUT_FILENAME "<Unused>"    OUTPUT_DIRECTORY "<Unused>"    FILE_EXTENSION "<Unused>"    TARGET_ATTR "_url_contents"    FILE_PATH_ATTR "<Unused>"    UPLOAD_FILE "<Unused>"    UPLOAD_BODY "<Unused>"    MULTIPART_UPLOAD <Unused>    UPLOAD_CONTENT_TYPE "<Unused>"    COMBINED_MULTIPART_TABLE    REQUEST_HEADER_TABLE Accept;application<solidus>vnd.vegvesen.nvdb-v3+xml    ADDITIONAL_URL_PARAMETERS    AUTH_USERNAME "<Unused>"    AUTH_PASSWORD "<Unused>"    AUTH_METHOD "<Unused>"    TARGET_ATTRIBUTE_ENCODING auto-detect    RESPONSE_HEADER_LIST_ATTR "_headers"    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    CONNECTION_TIMEOUT_LENGTH 60    TRANSFER_TIMEOUT_LENGTH 90    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    NAMED_CONNECTION "<Unused>"    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_HTTPCaller_2_Output"    OUTPUT REJECTED FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_HTTPCaller_2_<REJECTED>"
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_segmentert_WORKSPACE_NAME)_HTTPCaller_2 Output Splitter"   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_HTTPCaller_2_Output"   OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_HTTPCaller_2_Output_0_1H0UKYK+yjg="   OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_HTTPCaller_2_Output_1_0jbYL1gfP08="
@@ -17014,7 +17471,7 @@ FACTORY_DEF * TestFactory    FACTORY_NAME $(Vegnett_segmentert_WORKSPACE_NAME)_3
 # -------------------------------------------------------------------------
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegnett_segmentert_WORKSPACE_NAME)_CoordinateSystemSetter    INPUT  FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_3DForcer_OUTPUT"    OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_CoordinateSystemSetter_OUTPUT"         @CoordSys("EPSG:6173")
 # -------------------------------------------------------------------------
-Tcl2 proc $(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_10786ba7_eb72_4e4a_af9a_56ad3a3b421913_createDomain { in_domainName } {    set domainName $in_domainName;    if { {<Unused>} != {Global} }    {       set xFormName [FME_EncodeText {$(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_}];       set domainName $xFormName$domainName;    };    return $domainName; }
+Tcl2 proc $(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_10786ba7_eb72_4e4a_af9a_56ad3a3b421915_createDomain { in_domainName } {    set domainName $in_domainName;    if { {<Unused>} != {Global} }    {       set xFormName [FME_EncodeText {$(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_}];       set domainName $xFormName$domainName;    };    return $domainName; }
 INCLUDE [    set macroLine "MACRO $(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_SRC_ATTRS_EXP ";    puts $macroLine; ]
 FACTORY_DEF {*} GQueryFactory    FACTORY_NAME $(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_GQuery    INPUT  FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_CoordinateSystemSetter_OUTPUT"    ACTION SET_GEOMNAME    PARAMETER yes "senterlinje"    OUTPUT RESULT FEATURE_TYPE $(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4___RemoveAttrs___
 FACTORY_DEF <Unused> TeeFactory    FACTORY_NAME $(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_AttrRemover    INPUT FEATURE_TYPE $(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4___RemoveAttrs___    OUTPUT FEATURE_TYPE *       @RemoveAttributes(fme_encoded"$($(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_SRC_ATTRS_EXP)")
@@ -17026,8 +17483,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(Vegnett_segmentert_WORKSPACE_NAME)_Te
 FACTORY_DEF * TestFactory FACTORY_NAME $(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_Condition_1 INPUT FEATURE_TYPE $(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>returnert<closeparen>,$(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter) != 0 ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE $(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_Flere OUTPUT FAILED FEATURE_TYPE $(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_1
 FACTORY_DEF * TeeFactory FACTORY_NAME $(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE $(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE $(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter <lt>UNFILTERED<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt>"
-FACTORY_DEF * BranchingFactory   TARGET_FACTORY "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop1569848978 Input Splitter"   FACTORY_NAME "Loop to $(Vegnett_segmentert_WORKSPACE_NAME)_Loop1569848978 Input Splitter"   MAXIMUM_COUNT -1   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_Flere"   OUTPUT PASSED FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_segmentert_WORKSPACE_NAME)_Veglenke1569848978 Output Collector"   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_SET"   OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_Veglenke"
+FACTORY_DEF * BranchingFactory   TARGET_FACTORY "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop1569928342 Input Splitter"   FACTORY_NAME "Loop to $(Vegnett_segmentert_WORKSPACE_NAME)_Loop1569928342 Input Splitter"   MAXIMUM_COUNT -1   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_TestFilter_Flere"   OUTPUT PASSED FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_Loop"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(Vegnett_segmentert_WORKSPACE_NAME)_Veglenke1569928342 Output Collector"   INPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_GeometryPropertySetter_4_SET"   OUTPUT FEATURE_TYPE "$(Vegnett_segmentert_WORKSPACE_NAME)_Veglenke"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(Vegnett_segmentert_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Vegnett_segmentert Veglenke Output Renamer/Nuker"   INPUT FEATURE_TYPE Vegnett_segmentert_Veglenke   OUTPUT FEATURE_TYPE Vegnett_segmentert_Veglenke
 # -------------------------------------------------------------------------
@@ -17098,8 +17555,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME ListConcatenator_felt    INPUT  FEATURE
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME AttributeManager_adresse    INPUT  FEATURE_TYPE ListConcatenator_felt_OUTPUT    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "adressenavn" "veglenkeadresse.Veglenkeadresse.adressenavn" "" "RENAME_SET_VALUE" }      ATTR_ACTION { "adressekode" "veglenkeadresse.Veglenkeadresse.adressekode" "" "RENAME_SET_VALUE" }      ATTR_ACTION { "sideveg" "veglenkeadresse.Veglenkeadresse.sideveg" "" "RENAME_SET_VALUE" }    OUTPUT OUTPUT FEATURE_TYPE AttributeManager_adresse_OUTPUT
 # -------------------------------------------------------------------------
-Tcl2 proc NullAttributeMapper_2_95ca8b54_a136_4e62_a380_2cadb41e1aae14_null_replacer { otherValue newValue regExp } {    set attrs [split {veglenkeadresse.Veglenkeadresse.sideveg veglenkeadresse.Veglenkeadresse.adressekode veglenkeadresse.Veglenkeadresse.adressenavn} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {SETNULL}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {DELETEATTR};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper_2    INPUT  FEATURE_TYPE AttributeManager_adresse_OUTPUT    OUTPUT FEATURE_TYPE NullAttributeMapper_2_OUTPUT         @Tcl2("NullAttributeMapper_2_95ca8b54_a136_4e62_a380_2cadb41e1aae14_null_replacer {} {<Unused>} {}")
+Tcl2 proc NullAttributeMapper_2_95ca8b54_a136_4e62_a380_2cadb41e1aae16_null_replacer { otherValue newValue regExp } {    set attrs [split {veglenkeadresse.Veglenkeadresse.sideveg veglenkeadresse.Veglenkeadresse.adressekode veglenkeadresse.Veglenkeadresse.adressenavn} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {SETNULL}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {DELETEATTR};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper_2    INPUT  FEATURE_TYPE AttributeManager_adresse_OUTPUT    OUTPUT FEATURE_TYPE NullAttributeMapper_2_OUTPUT         @Tcl2("NullAttributeMapper_2_95ca8b54_a136_4e62_a380_2cadb41e1aae16_null_replacer {} {<Unused>} {}")
 # -------------------------------------------------------------------------
 Lookup AttributeValueMapper_typeVeg_LOOKUP_TABLE   Enkel<space>bilveg enkelBilveg   Gang-<space>og<space>sykkelveg gangOgSykkelveg   Rundkj<u00f8>ring rundkj<u00f8>ring   Kanalisert<space>veg kanalisertVeg   G<u00e5>gate    g<u00e5>gate   Trapp           trapp   Sykkelveg       sykkelveg   ""              @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>typeVeg<closeparen>,AttributeValueMapper_typeVeg)   ENCODED_SUPPORTUNICODE
 FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_typeVeg    INPUT  FEATURE_TYPE NullAttributeMapper_2_OUTPUT    OUTPUT FEATURE_TYPE AttributeValueMapper_typeVeg_OUTPUT         @Lookup(AttributeValueMapper_typeVeg_LOOKUP_TABLE,"typeVeg",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, typeVeg)
@@ -17107,8 +17564,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_typeVeg    INPUT  
 Lookup AttributeValueMapper_detaljnivå_LOOKUP_TABLE   Vegtrase<space>og<space>kj<u00f8>rebane ""   Kj<u00f8>rebane kj<u00f8>rebane   Kj<u00f8>refelt kj<u00f8>refelt   Vegtrase        vegtrase   ""              ""   ENCODED_SUPPORTUNICODE
 FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_detaljnivå    INPUT  FEATURE_TYPE AttributeValueMapper_typeVeg_OUTPUT    OUTPUT FEATURE_TYPE AttributeValueMapper_detaljnivå_OUTPUT         @Lookup(AttributeValueMapper_detaljnivå_LOOKUP_TABLE,"detaljniv<u00e5>",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, detaljniv<u00e5>)
 # -------------------------------------------------------------------------
-Tcl2 proc NullAttributeMapper_72d160ae_feae_40e2_ab02_61e9af29f48314_null_replacer { otherValue newValue regExp } {    set attrs [split {detaljniv<u00e5>} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL EMPTY}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {SETNULL EMPTY}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {DELETEATTR};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL EMPTY}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper    INPUT  FEATURE_TYPE AttributeValueMapper_detaljnivå_OUTPUT    OUTPUT FEATURE_TYPE NullAttributeMapper_OUTPUT         @Tcl2("NullAttributeMapper_72d160ae_feae_40e2_ab02_61e9af29f48314_null_replacer {} {<Unused>} {}")
+Tcl2 proc NullAttributeMapper_72d160ae_feae_40e2_ab02_61e9af29f48316_null_replacer { otherValue newValue regExp } {    set attrs [split {detaljniv<u00e5>} { }];    set decode true;    if { {SELECTED} == {ALL} } {       set attrs [FME_AttributeNames];       set decode false; 	 };    set decodedVal [FME_DecodeText $otherValue];    set decodedRegExp [FME_DecodeText $regExp];    foreach attr $attrs {      set act {NOOP};      if {$decode} {        set attr [FME_DecodeText $attr];      };      if {[FME_AttributeExists $attr]} {          set attrVal [FME_GetAttribute $attr];          if {[FME_IsAttributeNull $attr] } {             if {[string first {SETNULL} {SETNULL EMPTY}] != -1} {                 set act {DELETEATTR};             };          }          elseif { [string first {EMPTY} {SETNULL EMPTY}] != -1 && $attrVal == {}} {             set act {DELETEATTR};          }          elseif { $otherValue != {} && [string equal $attrVal $decodedVal]} {             set act {DELETEATTR};          }          elseif { $decodedRegExp != {} }          {             set results [FME_GetRegex $decodedRegExp $attrVal];             if {[llength [lindex $results 0]] > 0}             {                set act {DELETEATTR};             }          };      }      elseif {[string first {MISSINGATTR} {SETNULL EMPTY}] != -1} {             set act {DELETEATTR};      };      if {$act == {DELETEATTR} } {         FME_UnsetAttributes $attr;      } elseif { $act == {SETVALUE} } {         FME_SetAttribute $attr [FME_DecodeText $newValue];      } elseif { $act == {SETNULL} } {         FME_SetAttributeNull $attr;      } elseif { $act == {EMPTY} }      {         FME_SetAttribute $attr {};      };   }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME NullAttributeMapper    INPUT  FEATURE_TYPE AttributeValueMapper_detaljnivå_OUTPUT    OUTPUT FEATURE_TYPE NullAttributeMapper_OUTPUT         @Tcl2("NullAttributeMapper_72d160ae_feae_40e2_ab02_61e9af29f48316_null_replacer {} {<Unused>} {}")
 # -------------------------------------------------------------------------
 FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeFilter_detaljnivå    INPUT  FEATURE_TYPE NullAttributeMapper_OUTPUT    OUTPUT FEATURE_TYPE AttributeFilter_detaljnivå_FILTER
 FACTORY_DEF * AttributeFilterFactory FACTORY_NAME AttributeFilter_detaljnivå_Filter COMMAND_PARM_EVALUATION SINGLE_PASS INPUT FEATURE_TYPE AttributeFilter_detaljnivå_FILTER FILTER_ATTRIBUTE detaljniv<u00e5> FILTER_VALUES <lt>EMPTY<gt> <lt>MISSING<gt> <lt>NULL<gt> <lt>UNFILTERED<gt> kj<u00f8>rebane kj<u00f8>refelt vegtrase OUTPUT <lt>EMPTY<gt> FEATURE_TYPE AttributeFilter_detaljnivå_<lt>EMPTY<gt> OUTPUT <lt>MISSING<gt> FEATURE_TYPE AttributeFilter_detaljnivå_<lt>MISSING<gt> OUTPUT <lt>NULL<gt> FEATURE_TYPE AttributeFilter_detaljnivå_<lt>NULL<gt> OUTPUT <lt>UNFILTERED<gt> FEATURE_TYPE AttributeFilter_detaljnivå_<lt>UNFILTERED<gt> OUTPUT kj<u00f8>rebane FEATURE_TYPE AttributeFilter_detaljnivå_kj<u00f8>rebane OUTPUT kj<u00f8>refelt FEATURE_TYPE AttributeFilter_detaljnivå_kj<u00f8>refelt OUTPUT vegtrase FEATURE_TYPE AttributeFilter_detaljnivå_vegtrase
@@ -17142,4 +17599,4 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYP
 FACTORY_DEF * CreationFactory    FACTORY_NAME VisualizerProcessor   CREATE_AT_END   OUTPUT FEATURE_TYPE __NUKEME__   @TCL("if [file exists {$(WORKSPACE_TEMP_DIR)}] {set files [glob -nocomplain -directory  {$(WORKSPACE_TEMP_DIR)} -tails *.ffs];   if {[llength $files] == 1} {    set theFile {$(WORKSPACE_TEMP_DIR)/};   append theFile [lindex $files 0];   eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -f FFS \042$theFile\042 & \175;  } elseif { [llength $files] == 0 } {  catch { file delete -force {$(WORKSPACE_TEMP_DIR)} };  } else {  set filesNoExt {}; set lastfile {}; foreach {fileName} [lsort $files] { set fileNoExt [string trimright $fileName {.ffs}]; if [regexp {(.*)_[0-9]*$} $fileNoExt wholething fileNoExtBase] {  if { $fileNoExtBase == $lastfile } { continue } }; set lastfile $fileNoExt; lappend filesNoExt $fileNoExt };  eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -d {$(WORKSPACE_TEMP_DIR)} -a ffs -f FFS $filesNoExt & \175; }; }; ")
 FACTORY_DEF * TeeFactory    FACTORY_NAME VisualizerCleaner   INPUT FEATURE_TYPE __NUKEME__
 # -------------------------------------------------------------------------
-GML_1_DEF Vegobjekttype   id                           xml_char(200)   geometri.wkt                 xml_char(200)   metadata.versjon             xml_char(200)   metadata.type.id             xml_char(200)   egenskaper.egenskap{}.id     xml_char(200)   egenskaper.egenskap{}.enum_id xml_char(200)   egenskaper.egenskap{}.verdi  xml_char(200)   geometri.egengeometri        xml_char(200)   geometri.srid                xml_char(200)   lokasjon.stedfestinger.stedfesting{}.veglenkesekvens xml_char(200)   lokasjon.stedfestinger.stedfesting{}.startposisjon xml_char(200)   lokasjon.stedfestinger.stedfesting{}.sluttposisjon xml_char(200)   lokasjon.stedfestinger.stedfesting{} xml_char(200)   xml_fragment                 xml_char(200)   xml_id                       xml_char(200)   xml_matched_element          xml_char(200)   xml_parent_id                xml_char(200)   xml_parent_child_pos         xml_char(200)   identifikasjon.Identifikasjon.lokalId xml_char(200)   identifikasjon.Identifikasjon.versjonId xml_char(200)   identifikasjon.Identifikasjon.navnerom xml_char(200)   assosiasjoner{}.typeId       xml_char(200)   assosiasjoner{}.vegobjektId  xml_char(200)   assosiasjoner{}.relasjonstype xml_char(200)   epsg                         xml_char(200)   lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId xml_char(200)   lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom xml_char(200)   lineærPosisjon{}.LineærPosisjonStrekning.startposisjon xml_char(200)   lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon xml_char(200)   kommunenummer                xml_char(200)   _schemamapper_row_ids        xml_char(200)   svingeforbudFra.LineærPosisjonPunkt.posisjon xml_char(200)   svingeforbudTil.LineærPosisjonPunkt.posisjon xml_char(200)   viapunkt                     xml_char(200)   stedligBeredskap             xml_char(200)   høyfjellsstrekning           xml_char(200)   typeHinder                   xml_char(200)   trafikkreguleringer          xml_char(200)   lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId xml_char(200)   lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom xml_char(200)   lineærPosisjon.LineærPosisjonStrekning.startposisjon xml_char(200)   lineærPosisjon.LineærPosisjonStrekning.sluttposisjon xml_char(200)   funksjon                     xml_char(200)   type                         xml_char(200)   fraPosisjon                  xml_char(200)   tilPosisjon                  xml_char(200)   veglenkesekvens              xml_char(200)   veglenkeadresse.Veglenkeadresse.adressenavn xml_char(200)   veglenkeadresse.Veglenkeadresse.adressekode xml_char(200)   netelementid                 xml_char(200)   startnode                    xml_char(200)   sluttnode                    xml_char(200)   detaljnivå                   xml_char(200)   datafangstdato               xml_char(200)   medium                       xml_char(200)   kvalitet.Posisjonskvalitet.synbarhet xml_char(200)   typeVeg                      xml_char(200)   lenkesekvensid               xml_char(200)   orgLenkeFraPos               xml_char(200)   orgLenkeTilPos               xml_char(200)   konnekteringslenke           xml_char(200)   lenkesekvens.Lenkesekvensreferanse.startposisjon xml_char(200)   lenkesekvens.Lenkesekvensreferanse.sluttposisjon xml_char(200)   lenkesekvens.Lenkesekvensreferanse.identifikasjon.Identifikasjon.lokalId xml_char(200)   veglenkenummer               xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegsystem.Vegsystem.vegnummer xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegsystem.Vegsystem.fase xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegsystem.Vegsystem.vegkategori xml_char(200)   vegsystemreferanse.Vegsystemreferanse.kryssystem.Kryssystem.kryssdel xml_char(200)   vegsystemreferanse.Vegsystemreferanse.sideanlegg.Sideanlegg.sideanleggsdel xml_char(200)   vegsystemreferanse.Vegsystemreferanse.kryssystem.Kryssystem.fraMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.kryssystem.Kryssystem.tilMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.sideanlegg.Sideanlegg.fraMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.sideanlegg.Sideanlegg.tilMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.strekningNummer xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.delstrekningNummer xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.fraMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.tilMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.adskilteLøpNummer xml_char(200)   vegsystemreferanse.kryssystem.meter xml_char(200)   vegsystemreferanse.sideanlegg.meter xml_char(200)   vegsystemreferanse.strekning.meter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.adskilteLøp xml_char(200)   feltoversikt.felt{}          xml_char(200)   veglenkeadresse.Veglenkeadresse.sideveg xml_char(200)   feltoversikt                 xml_char(200)   kvalitet.Posisjonskvalitet.nøyaktighetHøyde xml_char(200)   kvalitet.Posisjonskvalitet.målemetode xml_char(200)   kvalitet.Posisjonskvalitet.nøyaktighet xml_char(200)   kvalitet.Posisjonskvalitet.maksimaltAvvik xml_char(200)   veglenkesekvensid            xml_char(200)   vegsystemreferanse.Vegsystemreferanse.referanseretning xml_char(200)   lenkesekvens.Lenkesekvensreferanse.identifikasjon.Identifikasjon.navnerom xml_char(200)   standardLRM                  xml_char(200)   _count                       xml_char(200)   kvalitet.Posisjonskvalitet.målemetodeHøyde xml_char(200)   geometri.kvalitet.målemetode xml_char(200)   geometri.kvalitet.synbarhet  xml_char(200)   geometri.kvalitet.målemetodeHøyde xml_char(200)   geometri.kvalitet.nøyaktighet xml_char(200)   geometri.kvalitet.nøyaktighetHøyde xml_char(200)   geometri.kvalitet.maksimaltAvvik xml_char(200)   geometri.medium              xml_char(200)
+GML_1_DEF Vegobjekttype   id                           xml_char(200)   geometri.wkt                 xml_char(200)   metadata.versjon             xml_char(200)   metadata.type.id             xml_char(200)   egenskaper.egenskap{}.id     xml_char(200)   egenskaper.egenskap{}.enum_id xml_char(200)   egenskaper.egenskap{}.verdi  xml_char(200)   geometri.egengeometri        xml_char(200)   geometri.srid                xml_char(200)   lokasjon.stedfestinger.stedfesting{}.veglenkesekvens xml_char(200)   lokasjon.stedfestinger.stedfesting{}.startposisjon xml_char(200)   lokasjon.stedfestinger.stedfesting{}.sluttposisjon xml_char(200)   lokasjon.stedfestinger.stedfesting{} xml_char(200)   xml_fragment                 xml_char(200)   xml_id                       xml_char(200)   xml_matched_element          xml_char(200)   xml_parent_id                xml_char(200)   xml_parent_child_pos         xml_char(200)   identifikasjon.Identifikasjon.lokalId xml_char(200)   identifikasjon.Identifikasjon.versjonId xml_char(200)   identifikasjon.Identifikasjon.navnerom xml_char(200)   assosiasjoner{}.typeId       xml_char(200)   assosiasjoner{}.vegobjektId  xml_char(200)   assosiasjoner{}.relasjonstype xml_char(200)   epsg                         xml_char(200)   lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId xml_char(200)   lineærPosisjon{}.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom xml_char(200)   lineærPosisjon{}.LineærPosisjonStrekning.startposisjon xml_char(200)   lineærPosisjon{}.LineærPosisjonStrekning.sluttposisjon xml_char(200)   kommunenummer                xml_char(200)   _schemamapper_row_ids        xml_char(200)   fase                         xml_char(200)   svingeforbudFra.LineærPosisjonPunkt.posisjon xml_char(200)   svingeforbudTil.LineærPosisjonPunkt.posisjon xml_char(200)   viapunkt                     xml_char(200)   stedligBeredskap             xml_char(200)   høyfjellsstrekning           xml_char(200)   typeHinder                   xml_char(200)   trafikkreguleringer          xml_char(200)   lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.lokalId xml_char(200)   lineærPosisjon.LineærPosisjonStrekning.lenkesekvens.Identifikasjon.navnerom xml_char(200)   lineærPosisjon.LineærPosisjonStrekning.startposisjon xml_char(200)   lineærPosisjon.LineærPosisjonStrekning.sluttposisjon xml_char(200)   funksjon                     xml_char(200)   type                         xml_char(200)   fraPosisjon                  xml_char(200)   tilPosisjon                  xml_char(200)   veglenkesekvens              xml_char(200)   veglenkeadresse.Veglenkeadresse.adressenavn xml_char(200)   veglenkeadresse.Veglenkeadresse.adressekode xml_char(200)   netelementid                 xml_char(200)   startnode                    xml_char(200)   sluttnode                    xml_char(200)   detaljnivå                   xml_char(200)   datafangstdato               xml_char(200)   medium                       xml_char(200)   kvalitet.Posisjonskvalitet.synbarhet xml_char(200)   typeVeg                      xml_char(200)   lenkesekvensid               xml_char(200)   orgLenkeFraPos               xml_char(200)   orgLenkeTilPos               xml_char(200)   konnekteringslenke           xml_char(200)   lenkesekvens.Lenkesekvensreferanse.startposisjon xml_char(200)   lenkesekvens.Lenkesekvensreferanse.sluttposisjon xml_char(200)   lenkesekvens.Lenkesekvensreferanse.identifikasjon.Identifikasjon.lokalId xml_char(200)   veglenkenummer               xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegsystem.Vegsystem.vegnummer xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegsystem.Vegsystem.fase xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegsystem.Vegsystem.vegkategori xml_char(200)   vegsystemreferanse.Vegsystemreferanse.kryssystem.Kryssystem.kryssdel xml_char(200)   vegsystemreferanse.Vegsystemreferanse.sideanlegg.Sideanlegg.sideanleggsdel xml_char(200)   vegsystemreferanse.Vegsystemreferanse.kryssystem.Kryssystem.fraMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.kryssystem.Kryssystem.tilMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.sideanlegg.Sideanlegg.fraMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.sideanlegg.Sideanlegg.tilMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.strekningNummer xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.delstrekningNummer xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.fraMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.tilMeter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.adskilteLøpNummer xml_char(200)   vegsystemreferanse.kryssystem.meter xml_char(200)   vegsystemreferanse.sideanlegg.meter xml_char(200)   vegsystemreferanse.strekning.meter xml_char(200)   vegsystemreferanse.Vegsystemreferanse.vegstrekning.Vegstrekning.adskilteLøp xml_char(200)   feltoversikt.felt{}          xml_char(200)   veglenkeadresse.Veglenkeadresse.sideveg xml_char(200)   feltoversikt                 xml_char(200)   kvalitet.Posisjonskvalitet.nøyaktighetHøyde xml_char(200)   kvalitet.Posisjonskvalitet.målemetode xml_char(200)   kvalitet.Posisjonskvalitet.nøyaktighet xml_char(200)   kvalitet.Posisjonskvalitet.maksimaltAvvik xml_char(200)   veglenkesekvensid            xml_char(200)   vegsystemreferanse.Vegsystemreferanse.referanseretning xml_char(200)   lenkesekvens.Lenkesekvensreferanse.identifikasjon.Identifikasjon.navnerom xml_char(200)   standardLRM                  xml_char(200)   _count                       xml_char(200)   kvalitet.Posisjonskvalitet.målemetodeHøyde xml_char(200)   geometri.kvalitet.målemetode xml_char(200)   geometri.kvalitet.synbarhet  xml_char(200)   geometri.kvalitet.målemetodeHøyde xml_char(200)   geometri.kvalitet.nøyaktighet xml_char(200)   geometri.kvalitet.nøyaktighetHøyde xml_char(200)   geometri.kvalitet.maksimaltAvvik xml_char(200)   geometri.medium              xml_char(200)
