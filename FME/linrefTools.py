@@ -7,14 +7,16 @@ import re
 API = 'https://www.utv.vegvesen.no/nvdb/api/v3/'
 #API = 'https://nvdbw01.kantega.no/nvdb/api/v3/'
 
-def linref2geom(sekvens_nr, fra, til, retning):
+def linref2geom(sekvens_nr, fra, til, kommunenr, retning):
     url = API + "vegnett/veglenkesekvenser/" + str(sekvens_nr)
     json = fetchJson(url)
     lst = []
     fra = float(fra)
     til = float(til)
     for veglenke in json["veglenker"]:
-        if 'sluttdato' in veglenke or veglenke['detaljnivå'] == 'Vegtrase':
+        if 'sluttdato' in veglenke \
+           or veglenke['detaljnivå'] == 'Vegtrase' \
+           or int(veglenke['geometri']['kommune']) != int(kommunenr):
             continue
         start = float(veglenke['startposisjon'])
         slutt = float(veglenke['sluttposisjon'])
@@ -47,8 +49,6 @@ def linref2geom(sekvens_nr, fra, til, retning):
         if geo.geom_type == 'MultiLineString':
             geo = fixMulti(geo)            
         obj['geom'] = geo
-        #print('start: %s, slutt: %s\n' % (obj['start'], obj['slutt']))
-        #print('geom : %s' % obj['geom'])
     return lst
 
 def fixMulti(geo):
@@ -71,7 +71,7 @@ def mergeRef(o1, o2):
         o1.append(o2)
     return o1
 
-def super2geom(sekvens_nr, fra, til, retning):
+def super2geom(sekvens_nr, fra, til, kommunenr, retning):
     url = API + "vegnett/veglenkesekvenser?superid=" + str(sekvens_nr)
     json = fetchJson(url)
     lst = []
@@ -80,11 +80,11 @@ def super2geom(sekvens_nr, fra, til, retning):
     for sekv in json['objekter']:
         veglenkesekvensid = sekv['veglenkesekvensid']
         for veglenke in sekv["veglenker"]:
-            if 'sluttdato' in veglenke:
+            if 'sluttdato' in veglenke \
+               or int(veglenke['geometri']['kommune']) != int(kommunenr):
                 continue
             start = float(veglenke['superstedfesting']['startposisjon'])
             slutt = float(veglenke['superstedfesting']['sluttposisjon'])
-            #print("start: %s, slutt: %s, fra: %s, til: %s" % (start, slutt, fra, til))
             lengde = float(veglenke['lengde'])
             retning = veglenke['superstedfesting']['retning']
             geo = geom(veglenke)
@@ -120,12 +120,10 @@ def super2geom(sekvens_nr, fra, til, retning):
         if geo.geom_type == 'MultiLineString':
             geo = fixMulti(geo)            
         obj['geom'] = geo
-        #print('xstart: %s, slutt: %s\n' % (obj['start'], obj['slutt']))
-        #print('xgeom : %s' % obj['geom'])
     return lst
 
-def linref2all(sekvens_nr, fra, til, retning = 'med'):
-    return linref2geom(sekvens_nr, fra, til, retning) + super2geom(sekvens_nr, fra, til, retning)
+def linref2all(sekvens_nr, fra, til, kommunenr, retning = 'med'):
+    return linref2geom(sekvens_nr, fra, til, kommunenr, retning) + super2geom(sekvens_nr, fra, til, kommunenr, retning)
     
 def superstedfesting2veglenke(stedf, s_start, s_slutt, v_start, v_slutt):
     scale = (s_slutt - s_start) / (v_slutt - v_start)
@@ -158,7 +156,6 @@ def almostEqual(a, b, scale, tolerance = 0.01):
     return abs(a - b) <= (tolerance / scale)
 
 def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
-    #print('vl_fra: %s, vl_til: %s, obj_fra: %s, obj_til: %s' % (vl_fra, vl_til, obj_fra, obj_til))
     vl_len = vl_til - vl_fra
     scale = lengde * vl_len
     if obj_fra <= vl_fra and obj_til >= vl_til:
@@ -169,7 +166,6 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
         for i, p in enumerate(coords):
             pd = line.project(Point(p), normalized=True)
             if almostEqual(pd, distance, scale):
-                #print('pd: %s, distance: %s, i: %s, scale: %s, lengde: %s, \ncoords: %s' % (pd, distance, i, scale, lengde, coords))
                 if i == 0:
                     return []
                 else:
@@ -183,7 +179,6 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
         for i, p in enumerate(coords):
             pd = line.project(Point(p), normalized=True)
             if almostEqual(pd, distance, scale):
-                #print('pd: %s, distance: %s, i: %s\ncoords: %s' % (pd, distance, i, coords))
                 if i == 0 or i == (len(coords) - 1):
                     return [] # single point line
                 else:
