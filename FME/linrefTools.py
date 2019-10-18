@@ -51,6 +51,27 @@ def linref2geom(sekvens_nr, fra, til, kommunenr, retning):
         obj['geom'] = geo
     return lst
 
+
+def linref2geomPunkt(sekvens_nr, posisjon):
+    url = API + "vegnett/veglenkesekvenser/" + str(sekvens_nr)
+    json = fetchJson(url)
+    lst = []
+    posisjon = float(posisjon)
+    for veglenke in json["veglenker"]:
+        if 'sluttdato' in veglenke \
+           or veglenke['detaljnivå'] == 'Vegtrase':
+            continue
+        start = float(veglenke['startposisjon'])
+        slutt = float(veglenke['sluttposisjon'])
+        if withinPunkt(start, slutt, posisjon):
+            geo = geomPunkt(veglenke, posisjon)
+            lst.append({
+                'posisjon': posisjon,
+                'veglenkesekvens': sekvens_nr,
+                'geom': geo
+            })
+    return lst
+
 def fixMulti(geo):
     fst = list(geo[0].coords)
     lst = list(geo[-1].coords)
@@ -122,9 +143,37 @@ def super2geom(sekvens_nr, fra, til, kommunenr, retning):
         obj['geom'] = geo
     return lst
 
+def super2geomPunkt(sekvens_nr, posisjon):
+    url = API + "vegnett/veglenkesekvenser?superid=" + str(sekvens_nr)
+    json = fetchJson(url)
+    lst = []
+    posisjon = float(posisjon)
+    for sekv in json['objekter']:
+        veglenkesekvensid = sekv['veglenkesekvensid']
+        for veglenke in sekv["veglenker"]:
+            if 'sluttdato' in veglenke:
+                continue
+            start = float(veglenke['superstedfesting']['startposisjon'])
+            slutt = float(veglenke['superstedfesting']['sluttposisjon'])
+            if withinPunkt(start, slutt, posisjon):
+                nyPos = superstedfesting2veglenke(posisjon, start, slutt, \
+                                                  float(veglenke['startposisjon']), \
+                                                  float(veglenke['sluttposisjon']))
+                geo = geomPunkt(veglenke, nyPos)
+                lst.append({
+                'posisjon': nyPos,
+                'veglenkesekvens': veglenkesekvensid,
+                'geom': geo
+                }) 
+    return lst
+
+    
 def linref2all(sekvens_nr, fra, til, kommunenr, retning = 'med'):
     return linref2geom(sekvens_nr, fra, til, kommunenr, retning) + super2geom(sekvens_nr, fra, til, kommunenr, retning)
-    
+
+def linref2allPunkt(sekvens_nr, posisjon):
+    return linref2geomPunkt(sekvens_nr, posisjon) + super2geomPunkt(sekvens_nr, posisjon)
+
 def superstedfesting2veglenke(stedf, s_start, s_slutt, v_start, v_slutt):
     scale = (s_slutt - s_start) / (v_slutt - v_start)
     return ((stedf - s_start) / scale) + v_start
@@ -142,12 +191,20 @@ def overlaps(start, slutt, fra, til):
 def within(start, slutt, fra, til):
     return start >= fra and slutt <= til
 
+def withinPunkt(start, slutt, posisjon):
+    return start <= posisjon and slutt >= posisjon
+
 def geom(veglenke):
     wkt = veglenke['geometri']['wkt']
     simpledec = re.compile(r"\d+\.\d+")
     wkt = re.sub(simpledec, mround, wkt)
     line = shapely.wkt.loads(wkt)
     return line
+
+def geomPunkt(veglenke, punkt):
+    line = geom(veglenke)
+    punkt = line.interpolate(punkt, normalized=True)
+    return punkt
 
 def mround(match): 
     return "{:.2f}".format(float(match.group()))
