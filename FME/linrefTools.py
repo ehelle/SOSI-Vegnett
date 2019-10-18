@@ -199,7 +199,16 @@ def geom(veglenke):
     simpledec = re.compile(r"\d+\.\d+")
     wkt = re.sub(simpledec, mround, wkt)
     line = shapely.wkt.loads(wkt)
+    if hasMissingZ(wkt):
+        line = shapely.ops.transform(_to_2d, line)
     return line
+
+def hasMissingZ(wkt):
+    return re.search(r"-999999", wkt)
+
+# https://github.com/Toblerity/Shapely/issues/709
+def _to_2d(x, y, z):
+    return tuple(filter(None, [x, y]))
 
 def geomPunkt(veglenke, punkt):
     line = geom(veglenke)
