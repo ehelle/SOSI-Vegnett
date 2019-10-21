@@ -196,6 +196,9 @@ def withinPunkt(start, slutt, posisjon):
 
 def geom(veglenke):
     wkt = veglenke['geometri']['wkt']
+    return wkt2line(wkt)
+
+def wkt2line(wkt):
     simpledec = re.compile(r"\d+\.\d+")
     wkt = re.sub(simpledec, mround, wkt)
     line = shapely.wkt.loads(wkt)
