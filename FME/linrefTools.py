@@ -4,8 +4,10 @@ from shapely.ops import linemerge, LineString, Point
 from functools import reduce
 import re
 
-API = 'https://www.utv.vegvesen.no/nvdb/api/v3/'
+#API = 'https://www.utv.vegvesen.no/nvdb/api/v3/'
 #API = 'https://nvdbw01.kantega.no/nvdb/api/v3/'
+#API = 'https://apilesv3-stm.utv.atlas.vegvesen.no/'
+API = 'https://apilesv3.test.atlas.vegvesen.no/'
 
 def linref2geom(sekvens_nr, fra, til, kommunenr, retning):
     url = API + "vegnett/veglenkesekvenser/" + str(sekvens_nr)

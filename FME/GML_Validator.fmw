@@ -1,8 +1,8 @@
 #! <?xml version="1.0" encoding="UTF-8" ?>
 #! <WORKSPACE
 #    Command-line to run this workspace:
-#        "C:\Program Files\FME\fme.exe" "C:\wrk\SOSI-Vegnett\FME\FKB-Vegnett 4.6\GML_Validator.fmw"
-#              --SourceDataset_PATH "C:\wrk\SOSI-Vegnett\GML\kommune\403\elveg20-hamar"
+#        "C:\Program Files\FME\fme.exe" C:\DATA\GIT\SOSI-Vegnett\FME\GML_Validator.fmw
+#              --SourceDataset_PATH "C:\DATA\GIT\SOSI-Vegnett\GML\kommune\511"
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
 #!   BEGIN_PYTHON=""
@@ -17,8 +17,8 @@
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="18578"
-#!   FME_DOCUMENT_GUID="ce317310-f7b7-469c-829b-2fbd9d815b52"
-#!   FME_DOCUMENT_PRIORGUID="e908ac38-3760-4495-aca5-c936c2748790,b1a4c4cd-a4e2-4e34-be78-8ec6a21785e3,ba041c88-4a8c-42be-9344-0e4190f20129,85cf62dc-9c2b-4834-b849-2c8ffdc326f9,7ef4da68-0518-4379-a939-ebb5fb43a543,50c8f589-2063-44c1-a62e-d1bff3ee31f7,caee3822-766e-4e14-b59d-9ebcdc3d5296,2f2e58fc-e35f-4621-b0f1-7ee03419fef7,2e8aacc2-a407-40b4-90e0-a6280ded96bf,f786866f-582c-4b2b-bfab-68f0c2be849d"
+#!   FME_DOCUMENT_GUID="486a54a0-8e91-4294-a254-b9db273696fa"
+#!   FME_DOCUMENT_PRIORGUID="e908ac38-3760-4495-aca5-c936c2748790,b1a4c4cd-a4e2-4e34-be78-8ec6a21785e3,ba041c88-4a8c-42be-9344-0e4190f20129,85cf62dc-9c2b-4834-b849-2c8ffdc326f9,7ef4da68-0518-4379-a939-ebb5fb43a543,50c8f589-2063-44c1-a62e-d1bff3ee31f7,caee3822-766e-4e14-b59d-9ebcdc3d5296,2f2e58fc-e35f-4621-b0f1-7ee03419fef7,2e8aacc2-a407-40b4-90e0-a6280ded96bf,f786866f-582c-4b2b-bfab-68f0c2be849d,ce317310-f7b7-469c-829b-2fbd9d815b52,2c0646b1-dad0-4b2e-bb8d-51710a014f8c,5050aba5-4bb0-4fd9-b796-8f527fe336ec"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -27,7 +27,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2018.1.1.1 (20181203 - Build 18578 - WIN64)"
-#!   LAST_SAVE_DATE="2019-05-23T08:50:56"
+#!   LAST_SAVE_DATE="2019-10-30T12:59:55"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -45,7 +45,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-1000.01 440.629"
+#!   VIEW_POSITION="-2390.65 0"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -64,7 +64,7 @@
 #!   WRITE_DEFS="false"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="multi_reader_id number(11,0) fme_primary_axis number(31,15) multi_reader_keyword char(50) fme_rotation number(31,15) fme_sweep_angle number(31,15) fme_geometry char(50) multi_reader_full_id number(11,0) fme_basename char(50) fme_start_angle number(31,15) fme_fill_color char(50) fme_feature_type char(50) fme_text_size number(31,15) fme_dataset char(50) multi_reader_type char(50) fme_type char(50) fme_color char(50) fme_text_string char(50) fme_secondary_axis number(31,15) path_geom char(13)"
+#!   EXPOSABLE_ATTRS="fme_type char(50) multi_reader_type char(50) fme_primary_axis number(31,15) fme_rotation number(31,15) multi_reader_keyword char(50) fme_color char(50) fme_text_string char(50) fme_feature_type char(50) fme_secondary_axis number(31,15) fme_start_angle number(31,15) multi_reader_id number(11,0) fme_sweep_angle number(31,15) path_geom char(13) fme_fill_color char(50) multi_reader_full_id number(11,0) fme_text_size number(31,15) fme_geometry char(50) fme_basename char(50) fme_dataset char(50)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -369,14 +369,14 @@
 #! <DATASET 
 #!   NAME="PATH_1"
 #!   OVERRIDE="-PATH_1_DATASET"
-#!   DATASET="PATH_1/elveg20-hamar"
+#!   DATASET="PATH_1/511"
 #! />
 #! </READER_DATASETS>
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI MULTIDIR SourceDataset_PATH Source Folder and File Pathnames Folder:"
-#!   DEFAULT_VALUE="C:\wrk\SOSI-Vegnett\GML\kommune\403\elveg20-hamar"
+#!   DEFAULT_VALUE="C:\DATA\GIT\SOSI-Vegnett\GML\kommune\511"
 #!   IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -544,7 +544,7 @@
 
 FME_PYTHON_VERSION 27
 GUI IGNORE PATH_IN_FME_GROUP_NAMED1_PATH_1,PATH_IN_GLOB_PATTERN_PATH_1,PATH_IN_RECURSE_DIRECTORIES_PATH_1,PATH_IN_TYPE_PATH_1,PATH_IN_RETRIEVE_FILE_PROPERTIES_PATH_1,SourceDataset_PATH_1,PATH_IN_NETWORK_AUTHENTICATION_PATH_1
-DEFAULT_MACRO SourceDataset_PATH C:\wrk\SOSI-Vegnett\GML\kommune\403\elveg20-hamar
+DEFAULT_MACRO SourceDataset_PATH C:\DATA\GIT\SOSI-Vegnett\GML\kommune\511
 GUI MULTIDIR SourceDataset_PATH Source Folder and File Pathnames Folder:
 INCLUDE [ if {{$(SourceDataset_PATH)} == {}} { puts_real {Parameter 'SourceDataset_PATH' must be given a value.}; exit 1; }; ]
 #! START_HEADER
