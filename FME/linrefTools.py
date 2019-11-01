@@ -94,7 +94,7 @@ def mergeRef(o1, o2):
         o1.append(o2)
     return o1
 
-def super2geom(sekvens_nr, fra, til, kommunenr, retning):
+def super2geom(sekvens_nr, fra, til, kommunenr, retning, felt):
     url = API + "vegnett/veglenkesekvenser?superid=" + str(sekvens_nr)
     json = fetchJson(url)
     lst = []
@@ -104,7 +104,8 @@ def super2geom(sekvens_nr, fra, til, kommunenr, retning):
         veglenkesekvensid = sekv['veglenkesekvensid']
         for veglenke in sekv["veglenker"]:
             if 'sluttdato' in veglenke \
-               or int(veglenke['geometri']['kommune']) != int(kommunenr):
+               or int(veglenke['geometri']['kommune']) != int(kommunenr) \
+                   or feltstr(veglenke['superstedfesting'].get('kjørefelt') or []) != feltstr(felt):
                 continue
             start = float(veglenke['superstedfesting']['startposisjon'])
             slutt = float(veglenke['superstedfesting']['sluttposisjon'])
@@ -145,7 +146,7 @@ def super2geom(sekvens_nr, fra, til, kommunenr, retning):
         obj['geom'] = geo
     return lst
 
-def super2geomPunkt(sekvens_nr, posisjon):
+def super2geomPunkt(sekvens_nr, posisjon, felt):
     url = API + "vegnett/veglenkesekvenser?superid=" + str(sekvens_nr)
     json = fetchJson(url)
     lst = []
@@ -153,7 +154,8 @@ def super2geomPunkt(sekvens_nr, posisjon):
     for sekv in json['objekter']:
         veglenkesekvensid = sekv['veglenkesekvensid']
         for veglenke in sekv["veglenker"]:
-            if 'sluttdato' in veglenke:
+            if 'sluttdato' in veglenke \
+               or feltstr(veglenke['superstedfesting'].get('kjørefelt') or []) != feltstr(felt):
                 continue
             start = float(veglenke['superstedfesting']['startposisjon'])
             slutt = float(veglenke['superstedfesting']['sluttposisjon'])
@@ -170,11 +172,14 @@ def super2geomPunkt(sekvens_nr, posisjon):
     return lst
 
     
-def linref2all(sekvens_nr, fra, til, kommunenr, retning = 'med'):
-    return linref2geom(sekvens_nr, fra, til, kommunenr, retning) + super2geom(sekvens_nr, fra, til, kommunenr, retning)
+def linref2all(sekvens_nr, fra, til, kommunenr, retning = 'med', felt = []):
+    return linref2geom(sekvens_nr, fra, til, kommunenr, retning) + super2geom(sekvens_nr, fra, til, kommunenr, retning, felt)
 
-def linref2allPunkt(sekvens_nr, posisjon):
-    return linref2geomPunkt(sekvens_nr, posisjon) + super2geomPunkt(sekvens_nr, posisjon)
+def linref2allPunkt(sekvens_nr, posisjon, felt = []):
+    return linref2geomPunkt(sekvens_nr, posisjon) + super2geomPunkt(sekvens_nr, posisjon, felt = [])
+
+def feltstr(feltlst):
+    return "#".join(feltlst)
 
 def superstedfesting2veglenke(stedf, s_start, s_slutt, v_start, v_slutt):
     scale = (s_slutt - s_start) / (v_slutt - v_start)
