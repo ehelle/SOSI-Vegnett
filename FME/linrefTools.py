@@ -4,10 +4,11 @@ from shapely.ops import linemerge, LineString, Point
 from functools import reduce
 import re
 
+API = 'https://www.vegvesen.no/nvdb/api/v3/'
 #API = 'https://www.utv.vegvesen.no/nvdb/api/v3/'
 #API = 'https://nvdbw01.kantega.no/nvdb/api/v3/'
 #API = 'https://apilesv3-stm.utv.atlas.vegvesen.no/'
-API = 'https://apilesv3.test.atlas.vegvesen.no/'
+#API = 'https://apilesv3.test.atlas.vegvesen.no/'
 
 def linref2geom(sekvens_nr, fra, til, kommunenr, retning):
     url = API + "vegnett/veglenkesekvenser/" + str(sekvens_nr)
@@ -104,8 +105,8 @@ def super2geom(sekvens_nr, fra, til, kommunenr, retning, felt):
         veglenkesekvensid = sekv['veglenkesekvensid']
         for veglenke in sekv["veglenker"]:
             if 'sluttdato' in veglenke \
-               or int(veglenke['geometri']['kommune']) != int(kommunenr) \
-                   or feltstr(veglenke['superstedfesting'].get('kjørefelt') or []) != feltstr(felt):
+               or (int(veglenke['geometri']['kommune']) != int(kommunenr)) \
+               or (feltstr(felt) and (feltstr(veglenke['superstedfesting'].get('kjørefelt') or []) != feltstr(felt))):
                 continue
             start = float(veglenke['superstedfesting']['startposisjon'])
             slutt = float(veglenke['superstedfesting']['sluttposisjon'])
@@ -173,7 +174,10 @@ def super2geomPunkt(sekvens_nr, posisjon, felt):
 
     
 def linref2all(sekvens_nr, fra, til, kommunenr, retning = 'med', felt = []):
-    return linref2geom(sekvens_nr, fra, til, kommunenr, retning) + super2geom(sekvens_nr, fra, til, kommunenr, retning, felt)
+    res = linref2geom(sekvens_nr, fra, til, kommunenr, retning) + super2geom(sekvens_nr, fra, til, kommunenr, retning, felt)
+    if not res:
+        print("sekv: %s, fra: %s, til: %s, kommunenr: %s, retning: %s, felt: %s\n" % (sekvens_nr, fra, til, kommunenr, retning, felt))
+    return res
 
 def linref2allPunkt(sekvens_nr, posisjon, felt = []):
     return linref2geomPunkt(sekvens_nr, posisjon) + super2geomPunkt(sekvens_nr, posisjon, felt = [])
@@ -209,8 +213,8 @@ def wkt2line(wkt):
     simpledec = re.compile(r"\d+\.\d+")
     wkt = re.sub(simpledec, mround, wkt)
     line = shapely.wkt.loads(wkt)
-    if hasMissingZ(wkt):
-        line = shapely.ops.transform(_to_2d, line)
+    #if hasMissingZ(wkt): # transform to NaN at later stage.
+        #line = shapely.ops.transform(_to_2d, line)
     return line
 
 def hasMissingZ(wkt):
@@ -268,6 +272,7 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
         coords = list(line.coords)
         start = None
         for i, p in enumerate(coords):
+            #print("i: %s\n" % i)
             pd = line.project(Point(p), normalized=True)
             if start == None:
                 if almostEqual(pd, dist1, scale):
@@ -275,9 +280,10 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
                     startP = []
                 elif pd > dist1:
                     cp = line.interpolate(dist1, normalized=True)
-                    start = i + 1
+                    start = i+1
                     startP = [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)]
-            if almostEqual(pd, dist2, scale):
+            if almostEqual(pd, dist2, scale) and ((start - i) > 1):
+                #print("pd: %s, dist2: %s, scale: %s, startP: %s, start: %s, i: %s, coords: %s" % (pd, dist2, scale, startP, start, i, coords))
                 return LineString(startP + coords[start:i+1])
             elif pd > dist2:
                 cp = line.interpolate(dist2, normalized=True)
@@ -293,6 +299,36 @@ def snuFeltListe(lst):
             n -= 1
         res.append(str(n) + felt[1:])
     return res
+
+def postProcessGML(file_location):
+    with open(file_location, 'r') as gml:
+        f = gml.read()
+    f = re.sub("gml:FeatureCollection", "wfs:FeatureCollection", f)
+    f = re.sub("gml:featureMember", "wfs:member", f)
+    f = re.sub("gml:boundedBy", "wfs:member", f)
+    f = re.sub("xmlns:gts=\"http:\/\/www.isotc211.org\/2005\/gts\"", "timeStamp=\"2019-09-03T09:55:38Z\"", f)
+    f = re.sub("gml:id=.*xsi:", "xsi:", f)
+    f = re.sub("xmlns:gss=\"http:\/\/www.isotc211.org\/2005\/gss", "xmlns:wfs=\"http://www.opengis.net/wfs/2.0", f)
+    f = re.sub("xmlns:gsr=\"http:\/\/www.isotc211.org\/2005\/gsr\"", "numberMatched=\"unknown\"", f)
+    f = re.sub("xmlns:gco=\"http:\/\/www.isotc211.org\/2005\/gco\"", "numberReturned=\"0\"", f)
+    f = re.sub("xmlns:gmd=\"http:\/\/www.isotc211.org\/2005\/gmd\"", "", f)
+    f = re.sub("xmlns:sc=\"http:\/\/www.interactive-instruments.de\/ShapeChange\/AppInfo\"", "", f)
+    f = re.sub("app:", "", f)
+    f = re.sub(":app", "", f)
+    f = re.sub("EPSG:6173", "http://www.opengis.net/def/crs/epsg/0/6173", f)
+    f = re.sub("-999999(\.0)?", "NaN", f)
+    with open(file_location, 'w') as gml:
+        gml.write(f)
+
+def postProcessSOSI(file_location):
+    with open(file_location, 'r') as sosi:
+        f = sosi.read()
+    f = re.sub("\.\.PRODUSENT \"Elveg 2.0\"", "..OBJEKTKATALOG Elveg 2.0", f)
+    f = re.sub("(\.\.SOSI-NIV.+ )4", "\g<1>2", f)
+    f = re.sub("(\.\.\.KOORDSYS )99", "\g<1>23", f)
+    f = re.sub("(\d+ \d+ )250000", "\g<1>-999999",  f)
+    with open(file_location, 'w') as sosi:
+        sosi.write(f)
 
 def test():
     print("running tests")
