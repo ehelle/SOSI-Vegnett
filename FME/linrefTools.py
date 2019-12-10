@@ -1,10 +1,12 @@
+import time
 import requests
 import shapely.wkt
 from shapely.ops import linemerge, LineString, Point
 from functools import reduce
 import re
 
-API = 'https://www.vegvesen.no/nvdb/api/v3/'
+API = 'https://pm1.utv.vegvesen.no/nvdb/api/v3/'
+#API = 'https://www.vegvesen.no/nvdb/api/v3/'
 #API = 'https://www.utv.vegvesen.no/nvdb/api/v3/'
 #API = 'https://nvdbw01.kantega.no/nvdb/api/v3/'
 #API = 'https://apilesv3-stm.utv.atlas.vegvesen.no/'
@@ -79,9 +81,15 @@ def fixMulti(geo):
     fst = list(geo[0].coords)
     lst = list(geo[-1].coords)
     if isCircular(fst):
-        fst[0] = (fst[0][0] + 0.000001, fst[0][1], fst[0][2])
+        if geo.has_z:
+            fst[0] = (fst[0][0] + 0.000001, fst[0][1], fst[0][2])
+        else:
+            fst[0] = (fst[0][0] + 0.000001, fst[0][1])
     if isCircular(lst):
-        lst[-1] = (lst[-1][0] + 0.000001, lst[-1][1], lst[-1][2])
+        if geo.has_z:
+            lst[-1] = (lst[-1][0] + 0.000001, lst[-1][1], lst[-1][2])
+        else:
+            lst[-1] = (lst[-1][0] + 0.000001, lst[-1][1])
     return linemerge([LineString(fst)] + [x for x in geo[1:-2]] + [LineString(lst)])
 
 def isCircular(line):
@@ -174,6 +182,7 @@ def super2geomPunkt(sekvens_nr, posisjon, felt):
 
     
 def linref2all(sekvens_nr, fra, til, kommunenr, retning = 'med', felt = []):
+    if not retning: retning = 'med' # fix for objekter sendt med retning None
     res = linref2geom(sekvens_nr, fra, til, kommunenr, retning) + super2geom(sekvens_nr, fra, til, kommunenr, retning, felt)
     if not res:
         print("sekv: %s, fra: %s, til: %s, kommunenr: %s, retning: %s, felt: %s\n" % (sekvens_nr, fra, til, kommunenr, retning, felt))
@@ -190,12 +199,14 @@ def superstedfesting2veglenke(stedf, s_start, s_slutt, v_start, v_slutt):
     return ((stedf - s_start) / scale) + v_start
 
 def fetchJson(url):
-    resp = requests.get(url)
-    if resp.status_code != 200:
-        #raise requests.exeption.HTTPError(resp.status_code)
-        raise ConnectionError(resp.status_code)
-    return resp.json()
-
+    #print(url)
+    for i in range(5):
+        resp = requests.get(url)
+        if resp.status_code == 200:
+            return resp.json()
+        time.sleep(10 + i*30)
+    raise ConnectionError(resp.status_code)
+    
 def overlaps(start, slutt, fra, til):
     return (fra >= start and fra < slutt) or (til > start and til <= slutt)
 
@@ -208,6 +219,11 @@ def withinPunkt(start, slutt, posisjon):
 def geom(veglenke):
     wkt = veglenke['geometri']['wkt']
     return wkt2line(wkt)
+
+def reverseWKT(wkt):
+    l = wkt2line(wkt)
+    l.coords = l.coords[::-1]
+    return l.wkt
 
 def wkt2line(wkt):
     simpledec = re.compile(r"\d+\.\d+")
