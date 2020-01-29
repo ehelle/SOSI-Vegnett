@@ -52,7 +52,7 @@ def linref2geom(sekvens_nr, fra, til, kommunenr, retning):
     for obj in lst:
         geo = linemerge(obj['geom'])
         if geo.geom_type == 'MultiLineString':
-            geo = fixMulti(geo)            
+            geo = fixMulti(geo)
         obj['geom'] = geo
     return lst
 
@@ -119,7 +119,7 @@ def super2geom(sekvens_nr, fra, til, kommunenr, retning, felt):
             start = float(veglenke['superstedfesting']['startposisjon'])
             slutt = float(veglenke['superstedfesting']['sluttposisjon'])
             lengde = float(veglenke['lengde'])
-            retning = veglenke['superstedfesting']['retning']
+            retning = veglenke['superstedfesting'].get('retning', 'MED')
             geo = geom(veglenke)
             if retning == 'MOT':
                 geo.coords = geo.coords[::-1]
@@ -151,7 +151,7 @@ def super2geom(sekvens_nr, fra, til, kommunenr, retning, felt):
     for obj in lst:
         geo = linemerge(obj['geom'])
         if geo.geom_type == 'MultiLineString':
-            geo = fixMulti(geo)            
+            geo = fixMulti(geo)
         obj['geom'] = geo
     return lst
 
@@ -177,10 +177,9 @@ def super2geomPunkt(sekvens_nr, posisjon, felt):
                 'posisjon': nyPos,
                 'veglenkesekvens': veglenkesekvensid,
                 'geom': geo
-                }) 
+                })
     return lst
 
-    
 def linref2all(sekvens_nr, fra, til, kommunenr, retning = 'med', felt = []):
     if not retning: retning = 'med' # fix for objekter sendt med retning None
     res = linref2geom(sekvens_nr, fra, til, kommunenr, retning) + super2geom(sekvens_nr, fra, til, kommunenr, retning, felt)
@@ -198,15 +197,16 @@ def superstedfesting2veglenke(stedf, s_start, s_slutt, v_start, v_slutt):
     scale = (s_slutt - s_start) / (v_slutt - v_start)
     return ((stedf - s_start) / scale) + v_start
 
-def fetchJson(url):
+session = requests.Session()
+def fetchJson(url, s = session):
     #print(url)
     for i in range(5):
-        resp = requests.get(url)
+        resp = s.get(url)
         if resp.status_code == 200:
             return resp.json()
         time.sleep(10 + i*30)
     raise ConnectionError(resp.status_code)
-    
+
 def overlaps(start, slutt, fra, til):
     return (fra >= start and fra < slutt) or (til > start and til <= slutt)
 
@@ -226,7 +226,7 @@ def reverseWKT(wkt):
     return l.wkt
 
 def wkt2line(wkt):
-    simpledec = re.compile(r"\d+\.\d+")
+    simpledec = re.compile(r"-?\d+\.\d+")
     wkt = re.sub(simpledec, mround, wkt)
     line = shapely.wkt.loads(wkt)
     #if hasMissingZ(wkt): # transform to NaN at later stage.
@@ -245,10 +245,10 @@ def geomPunkt(veglenke, punkt):
     punkt = line.interpolate(punkt, normalized=True)
     return punkt
 
-def mround(match): 
+def mround(match):
     return "{:.2f}".format(float(match.group()))
 
-def almostEqual(a, b, scale, tolerance = 0.01):
+def almostEqual(a, b, scale, tolerance = 0.001):
     return abs(a - b) <= (tolerance / scale)
 
 def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
@@ -268,7 +268,10 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
                     return LineString(coords[:i+1])
             if pd > distance:
                 cp = line.interpolate(distance, normalized=True)
-                return LineString(coords[:i] + [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)])
+                if line.has_z:
+                    return LineString(coords[:i] + [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)])
+                else:
+                    return LineString(coords[:i] + [(cp.x, cp.y)])
     elif obj_fra > vl_fra and obj_til >= vl_til:
         distance = 1 - ((vl_til - obj_fra) / vl_len)
         coords = list(line.coords)
@@ -281,7 +284,10 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
                     return LineString(coords[i:])
             if pd > distance:
                 cp = line.interpolate(distance, normalized=True)
-                return LineString([(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)] + coords[i:])
+                if line.has_z:
+                    return LineString([(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)] + coords[i:])
+                else:
+                    return LineString([(cp.x, cp.y)] + coords[i:])
     elif obj_fra > vl_fra and obj_til < vl_til:
         dist1 = 1 - ((vl_til - obj_fra) / vl_len)
         dist2 = (obj_til - vl_fra) / vl_len
@@ -290,20 +296,31 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
         for i, p in enumerate(coords):
             #print("i: %s\n" % i)
             pd = line.project(Point(p), normalized=True)
+            #print("pd: %s dist1: %s, scale: %s, obj_fra: %s, obj_til: %s, vl_fra: %s, vl_til: %s" % (pd, dist1, scale, obj_fra, obj_til, vl_fra, vl_til))
             if start == None:
+                #print("pd: %s dist1: %s, scale: %s" % (pd, dist1, scale))
                 if almostEqual(pd, dist1, scale):
                     start = i
                     startP = []
                 elif pd > dist1:
                     cp = line.interpolate(dist1, normalized=True)
                     start = i+1
-                    startP = [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)]
+                    if line.has_z:
+                        startP = [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)]
+                    else:
+                        startP = [(cp.x, cp.y)]
             if almostEqual(pd, dist2, scale) and ((start - i) > 1):
                 #print("pd: %s, dist2: %s, scale: %s, startP: %s, start: %s, i: %s, coords: %s" % (pd, dist2, scale, startP, start, i, coords))
                 return LineString(startP + coords[start:i+1])
             elif pd > dist2:
                 cp = line.interpolate(dist2, normalized=True)
-                return LineString(startP + coords[start:i] + [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)])
+                if i == 0 or i == (len(coords) - 1):
+                    return [] # single point line
+                else:
+                    if line.has_z:
+                        return LineString(startP + coords[start:i] + [(cp.x, cp.y, (coords[i-1][2] + coords[i][2]) / 2)])
+                    else:
+                        return LineString(startP + coords[start:i] + [(cp.x, cp.y)])
 
 def snuFeltListe(lst):
     res = []
@@ -343,8 +360,17 @@ def postProcessSOSI(file_location):
     f = re.sub("(\.\.SOSI-NIV.+ )4", "\g<1>2", f)
     f = re.sub("(\.\.\.KOORDSYS )99", "\g<1>23", f)
     f = re.sub("(\d+ \d+ )250000", "\g<1>-999999",  f)
+    f = re.sub("^(\.\.\.LRFRAPOSISJON \d\.\d{1,8}).+", "\g<1>", f)
+    f = re.sub("^(\.\.\.LRTILPOSISJON \d\.\d{1,8}).+", "\g<1>", f)
     with open(file_location, 'w') as sosi:
         sosi.write(f)
+
+def postProcessAllFiles():
+    import glob
+    for f in glob.glob('/mnt/c/DATA/GIT/SOSI-Vegnett/GML/kommune/*.gml'): postProcessGML(f)
+    for f in glob.glob('/mnt/c/DATA/GIT/SOSI-Vegnett/GML/kommune/**/*.gml'): postProcessGML(f)
+    for f in glob.glob('/mnt/c/DATA/GIT/SOSI-Vegnett/GML/kommune/*.SOS'): postProcessSOSI(f)
+    for f in glob.glob('/mnt/c/DATA/GIT/SOSI-Vegnett/GML/kommune/**/*.SOS'): postProcessSOSI(f)
 
 def test():
     print("running tests")
@@ -352,7 +378,7 @@ def test():
     assert(snuFeltListe(['1h1','2v1']) == ['2h1','1v1'])
     assert(overlaps(0.06979609, 0.61288609, 0.4018847, 0.5443459))
     print("tests pass")
-            
+
 if __name__ == '__main__':
     test()
     #linref2geom(705275, 0.0, 0.16063818)
