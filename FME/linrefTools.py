@@ -1,12 +1,14 @@
 import time
+from datetime import datetime
+import logging
 import requests
 import shapely.wkt
 from shapely.ops import linemerge, LineString, Point
 from functools import reduce
 import re
 
-API = 'https://pm1.utv.vegvesen.no/nvdb/api/v3/'
-#API = 'https://www.vegvesen.no/nvdb/api/v3/'
+#API = 'https://pm1.utv.vegvesen.no/nvdb/api/v3/'
+API = 'https://www.vegvesen.no/nvdb/api/v3/'
 #API = 'https://www.utv.vegvesen.no/nvdb/api/v3/'
 #API = 'https://nvdbw01.kantega.no/nvdb/api/v3/'
 #API = 'https://apilesv3-stm.utv.atlas.vegvesen.no/'
@@ -91,6 +93,14 @@ def fixMulti(geo):
         else:
             lst[-1] = (lst[-1][0] + 0.000001, lst[-1][1])
     return linemerge([LineString(fst)] + [x for x in geo[1:-2]] + [LineString(lst)])
+
+def log(tekst): 
+    filename='log/' + todaysdate() + '.log'
+    logging.basicConfig(filename=filename, level=logging.DEBUG)
+    logging.info(tekst)
+
+def todaysdate():
+    return datetime.today().strftime("%Y%m%d")
 
 def isCircular(line):
     return line[0] == line[-1]
@@ -279,6 +289,7 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
             pd = line.project(Point(p), normalized=True)
             if almostEqual(pd, distance, scale):
                 if i == 0 or i == (len(coords) - 1):
+                    log("geom: %s, vl_fra %s, vl_til %s, obj_fra %s, obj_til %s, lengde %s" % (line, vl_fra, vl_til, obj_fra, obj_til, lengde))
                     return [] # single point line
                 else:
                     return LineString(coords[i:])
@@ -315,6 +326,7 @@ def cut(line, vl_fra, vl_til, obj_fra, obj_til, lengde):
             elif pd > dist2:
                 cp = line.interpolate(dist2, normalized=True)
                 if i == 0 or i == (len(coords) - 1):
+                    log("geom: %s, vl_fra %s, vl_til %s, obj_fra %s, obj_til %s, lengde %s" % (line, vl_fra, vl_til, obj_fra, obj_til, lengde))
                     return [] # single point line
                 else:
                     if line.has_z:
