@@ -5,7 +5,11 @@ import requests
 import shapely.wkt
 from shapely.ops import linemerge, LineString, Point
 from functools import reduce
+from functools import lru_cache
 import re
+from ratelimit import limits
+import ratelimit
+import backoff
 
 #API = 'https://pm1.utv.vegvesen.no/nvdb/api/v3/'
 API = 'https://www.vegvesen.no/nvdb/api/v3/'
@@ -174,7 +178,7 @@ def super2geomPunkt(sekvens_nr, posisjon, felt):
         veglenkesekvensid = sekv['veglenkesekvensid']
         for veglenke in sekv["veglenker"]:
             if 'sluttdato' in veglenke \
-               or feltstr(veglenke['superstedfesting'].get('kjørefelt') or []) != feltstr(felt):
+               or (feltstr(felt) and (feltstr(veglenke['superstedfesting'].get('kjørefelt') or []) != feltstr(felt))):
                 continue
             start = float(veglenke['superstedfesting']['startposisjon'])
             slutt = float(veglenke['superstedfesting']['sluttposisjon'])
@@ -198,7 +202,7 @@ def linref2all(sekvens_nr, fra, til, kommunenr, retning = 'med', felt = []):
     return res
 
 def linref2allPunkt(sekvens_nr, posisjon, felt = []):
-    return linref2geomPunkt(sekvens_nr, posisjon) + super2geomPunkt(sekvens_nr, posisjon, felt = [])
+    return linref2geomPunkt(sekvens_nr, posisjon) + super2geomPunkt(sekvens_nr, posisjon, felt)
 
 def feltstr(feltlst):
     return "#".join(feltlst)
@@ -208,7 +212,14 @@ def superstedfesting2veglenke(stedf, s_start, s_slutt, v_start, v_slutt):
     return ((stedf - s_start) / scale) + v_start
 
 session = requests.Session()
+session.headers.update({'X-Client': 'Elveg 2.0'})
+@lru_cache(maxsize=None)
 def fetchJson(url, s = session):
+    return fetchJsonHelper(url, s)
+
+@backoff.on_exception(backoff.expo, ratelimit.exception.RateLimitException, max_time=60)
+@limits(10, 1) # max 10 calls per 1 sec
+def fetchJsonHelper(url, s):
     #print(url)
     for i in range(5):
         resp = s.get(url)
@@ -224,7 +235,7 @@ def within(start, slutt, fra, til):
     return start >= fra and slutt <= til
 
 def withinPunkt(start, slutt, posisjon):
-    return start <= posisjon and slutt >= posisjon
+    return (start < posisjon and slutt >= posisjon) or (start == 0.0 and posisjon == 0.0)
 
 def geom(veglenke):
     wkt = veglenke['geometri']['wkt']
@@ -250,10 +261,17 @@ def hasMissingZ(wkt):
 def _to_2d(x, y, z):
     return tuple(filter(None, [x, y]))
 
-def geomPunkt(veglenke, punkt):
+def geomPunkt(veglenke, ref):
     line = geom(veglenke)
-    punkt = line.interpolate(punkt, normalized=True)
+    nyRef = refFraSekvensTilVeglenke(veglenke, ref)
+    punkt = line.interpolate(nyRef, normalized=True)
     return punkt
+
+def refFraSekvensTilVeglenke(veglenke, ref):
+    fra = float(veglenke['startposisjon'])
+    til = float(veglenke['sluttposisjon'])
+    diff = til - fra
+    return (ref - fra) / diff
 
 def mround(match):
     return "{:.2f}".format(float(match.group()))
@@ -360,7 +378,9 @@ def postProcessGML(file_location):
     f = re.sub("xmlns:sc=\"http:\/\/www.interactive-instruments.de\/ShapeChange\/AppInfo\"", "", f)
     f = re.sub("app:", "", f)
     f = re.sub(":app", "", f)
-    f = re.sub("EPSG:6173", "http://www.opengis.net/def/crs/epsg/0/6173", f)
+    # f = re.sub("EPSG:6173", "http://www.opengis.net/def/crs/epsg/0/6173", f)
+    f = re.sub("EPSG:5973", "http://www.opengis.net/def/crs/epsg/0/5973", f)
+    # f = re.sub("http://www.opengis.net/def/crs/epsg/0/6173", "http://www.opengis.net/def/crs/epsg/0/5973", f)
     f = re.sub("-999999(\.0)?", "NaN", f)
     with open(file_location, 'w') as gml:
         gml.write(f)
@@ -371,7 +391,8 @@ def postProcessSOSI(file_location):
     f = re.sub("\.\.PRODUSENT \"Elveg 2.0\"", "..OBJEKTKATALOG Elveg 2.0", f)
     f = re.sub("(\.\.SOSI-NIV.+ )4", "\g<1>2", f)
     f = re.sub("(\.\.\.KOORDSYS )99", "\g<1>23", f)
-    f = re.sub("(\d+ \d+ )250000", "\g<1>-999999",  f)
+    f = re.sub("(\d+ \d+) 250000", "\g<1>",  f)
+    # f = re.sub("(\d+ \d+ )250000", "\g<1>-999999",  f)
     f = re.sub("^(\.\.\.LRFRAPOSISJON \d\.\d{1,8}).+", "\g<1>", f)
     f = re.sub("^(\.\.\.LRTILPOSISJON \d\.\d{1,8}).+", "\g<1>", f)
     with open(file_location, 'w') as sosi:
@@ -379,10 +400,10 @@ def postProcessSOSI(file_location):
 
 def postProcessAllFiles():
     import glob
-    for f in glob.glob('/mnt/c/DATA/GIT/SOSI-Vegnett/GML/kommune/*.gml'): postProcessGML(f)
-    for f in glob.glob('/mnt/c/DATA/GIT/SOSI-Vegnett/GML/kommune/**/*.gml'): postProcessGML(f)
-    for f in glob.glob('/mnt/c/DATA/GIT/SOSI-Vegnett/GML/kommune/*.SOS'): postProcessSOSI(f)
-    for f in glob.glob('/mnt/c/DATA/GIT/SOSI-Vegnett/GML/kommune/**/*.SOS'): postProcessSOSI(f)
+    for f in glob.glob('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/*.gml'): postProcessGML(f)
+    for f in glob.glob('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/**/*.gml'): postProcessGML(f)
+    for f in glob.glob('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/*.SOS'): postProcessSOSI(f)
+    for f in glob.glob('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/**/*.SOS'): postProcessSOSI(f)
 
 def test():
     print("running tests")
