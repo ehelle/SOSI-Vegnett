@@ -15,7 +15,8 @@ import backoff
 API = 'https://www.vegvesen.no/nvdb/api/v3/'
 #API = 'https://www.utv.vegvesen.no/nvdb/api/v3/'
 #API = 'https://nvdbw01.kantega.no/nvdb/api/v3/'
-#API = 'https://apilesv3-stm.utv.atlas.vegvesen.no/'
+# API = 'https://apilesv3-stm.utv.atlas.vegvesen.no/'
+# API = 'https://nvdbapiles-v3-stm.utv.atlas.vegvesen.no/'
 #API = 'https://apilesv3.test.atlas.vegvesen.no/'
 
 def linref2geom(sekvens_nr, fra, til, kommunenr, retning):
@@ -363,6 +364,16 @@ def snuFeltListe(lst):
         res.append(str(n) + felt[1:])
     return res
 
+def isVegtrase(veglenkeid, ref):
+    url = API + "vegnett/veglenkesekvenser/" + str(veglenkeid)
+    json = fetchJson(url)
+    for veglenke in json["veglenker"]:
+        if 'sluttdato' in veglenke \
+           or float(ref) < float(veglenke['startposisjon']) \
+           or float(ref) > float(veglenke['sluttposisjon']):
+            continue
+        return veglenke['detaljnivå'] == 'Vegtrase'
+
 def postProcessGML(file_location):
     with open(file_location, 'r') as gml:
         f = gml.read()
@@ -404,6 +415,13 @@ def postProcessAllFiles():
     for f in glob.glob('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/**/*.gml'): postProcessGML(f)
     for f in glob.glob('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/*.SOS'): postProcessSOSI(f)
     for f in glob.glob('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/**/*.SOS'): postProcessSOSI(f)
+
+def postProcessKommune(nr):
+    import gloqB
+    postProcessGML('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/{}.gml'.format(nr))
+    for f in glob.glob('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/{}/*.gml'.format(nr)): postProcessGML(f)
+    postProcessSOSI('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/{}.SOS'.format(nr))
+    for f in glob.glob('/c/DATA/GIT/SOSI-Vegnett/GML/kommune/{}/*.SOS'.format(nr)): postProcessSOSI(f)
 
 def test():
     print("running tests")
